@@ -1,0 +1,147 @@
+:root{
+  /* COLORS */
+  /* https://www.w3.org/TR/css-color-3/#svg-color */
+  --background: lightcyan;
+  --topground:  rgba(15, 182, 182, 0.637);
+  --topground:  rgb(40, 40, 40);
+  --colorText:  mintcream;
+  --colorOpt1:  crimson;
+  --colorOpt2:  snow;
+  --bgHover:    rgb(100, 100, 100);
+  /*
+  --colorText:  rgb(40, 40, 40);
+  --topground:  snow;
+  --background: rgb(40, 40, 40);
+  */
+}
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+.body{
+  background-color: var(--background);
+}
+
+.header, .welcome, .aboutMe, .services, .projects{
+  background-color: var(--topground);
+  color:            var(--colorText);
+  margin:           .5rem auto;
+  max-width:        65rem;
+  padding:          1em 0em;
+}
+/* -------------------------------- */
+/* Logo y menú */
+.header-div{
+  display:                grid;
+  grid-template-columns:  repeat(10, 1fr);
+  grid-template-rows:     min-content;
+}
+/* Logo */
+.header-div-a{
+  align-self:             center;
+  grid-column:            1/2;
+  color:                  var(--background);
+  justify-self:           center;
+}
+.brand{
+  /* padding-left:           .5rem;
+  padding-right:          .5rem; */
+  font-size:              2rem;
+}
+/* Menú */
+.navegator{
+  grid-column:            2/10;
+  justify-self:           center;
+  /* PARA PANTALLAS CHICAS
+  justify-self: start; */
+}
+.navegator-ul{
+  display:                grid;
+  grid-template-columns:  repeat(4, max-content);
+  padding:                0px;
+  grid-column-gap:        .2em;
+  /* PARA PANTALLAS CHICAS
+  grid-column-gap: .2em; */
+}
+.navSilhouette{
+  padding:  .7rem .5rem;
+  border:   .2em double var(--colorText);
+  color:    var(--colorText);
+}
+.navSilhouette:hover{
+  padding:          .7em .5em;
+  border:           .2em solid var(--colorText);
+  background-image: linear-gradient(to bottom right, var(--bgHover) 30%, var(--topground) 50%, var(--bgHover) 80%);
+}
+/* -------------------------------- */
+/* Currículum */
+.welcome-div{
+  display:                grid;
+  grid-template-columns:  repeat(5, 2fr);
+  grid-template-rows:     min-content 1fr;
+  justify-content:        space-evenly;
+  justify-items:          center;
+  align-items:            center;
+}
+/* Título */
+.welcome-div-h1{
+  grid-column:    1/6;
+  grid-row:       1/2;
+}
+/* Foto */
+.welcome-div-figure{
+  grid-column:    2/3;
+  grid-row:       2/3;
+  margin:         .8em;
+}
+.profilePicture{
+  width:          12rem;
+  border:         3px solid var(--background);
+  border-radius:  50%;
+}
+/* datos */
+.welcome-div-dates{
+  grid-column:            3/5;
+  grid-row:               2/3;
+  display:                grid;
+  grid-template-columns:  3fr 7fr;
+  grid-template-rows:     repeat(5, min-content); 
+  grid-auto-rows:         min-content;
+}
+.welcome-div-dates>*{
+  margin: .5em;
+}
+/* -------------------------------- */
+/* Perfil profecional */
+.aboutMe-div-p{
+  max-width:      540px;
+  padding:        0em 2em;
+}
+.aboutMe-div-ul{
+  max-width:      320px;
+  padding-bottom: 2em;
+}
+
+.networks-div{
+  max-width:        540px;
+  display:          flex;
+  justify-content:  space-evenly;
+}
+
+/* [class*="h2"], [class*="h3"]{
+  padding-top:      .8em;
+} */
+.typeNone{
+  list-style-type:  none;
+}
+.decoratNone{
+  text-decoration:  none;
+}
+.alignCenter{
+  text-align:       center;
+}
+.marginCenter{
+  margin-right:     auto;
+  margin-left:      auto;
+}
