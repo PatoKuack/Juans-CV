@@ -1,4 +1,12 @@
+*.key
+*.jpg
+!profilePicture.jpg
+*.png
+*.mp3
+*.mp4
+
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+.env
