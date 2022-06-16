@@ -1,0 +1,26 @@
+.main-header {
+  height: $header-height;
+  position: fixed;
+  width: 100%;
+  z-index: var(--z-fixed);
+  top: 0;
+
+  & > * {
+    // justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    height: 100%;
+  }
+}
+
+.main-brand {
+  height: calc(#{$header-height} - (#{$header-height}/2));
+  font-size: calc(#{$header-height} - (#{$header-height}/2));
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: calc(#{$toggle-width} + #{$margin-left-toggle});
+
+  @include from(m) {
+    padding-right: 0;
+  }
+}

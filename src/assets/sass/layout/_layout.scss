@@ -1,0 +1,21 @@
+.l-container {
+  position: relative;
+  display: flex;
+  max-width: $max-width;
+  margin: 0 auto .5rem auto;
+  background-color: var(--bg-color-B);
+}
+
+.l-complement {
+  display       : flex;
+  flex-direction: column;
+  border        : $border-width solid var(--border-color);
+  padding-top   : 2.5rem;
+  padding-bottom: 3rem;
+  padding-left  : 2rem;
+  padding-right : 2rem;
+  @include from(m) {
+    padding-top   : 4rem;
+    padding-bottom: 5rem;
+  }
+}

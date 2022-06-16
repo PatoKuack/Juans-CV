@@ -1,0 +1,120 @@
+$image-width: 12rem;
+$padding-top-cfirst: 4rem;
+@include from(m) {
+  $image-width: 18rem;
+  $padding-top-cfirst: 6rem;
+}
+
+[class*="c-"] > * {
+  margin-left : auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+[class*="c-"]>[class$="__title"]:not(.c-third__article__title) {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.c-first {
+  margin-top: $header-height;
+  padding-top: $padding-top-cfirst;
+  text-align: center;
+  border-top-style: none;
+
+  &__image {
+    border        : 3px solid var(--border-color);
+    border-radius : 50%;
+    max-width     : $image-width;
+    margin-bottom : 1rem;
+    box-shadow: 0px calc(#{$image-width}/3.5) 40px -60px var(--text-color);
+    @include from(m) {
+      margin-top    : 1rem;
+      margin-bottom : 2rem;
+    }
+  }
+  &__title {
+    margin-bottom: .2rem;
+  }
+  &__subtitle {
+    font-size: var(--h3-font-size);
+  }
+}
+
+.c-second {
+
+  &__content {
+    text-align: center;
+  }
+  &__content > * {
+    text-align: left;
+  }
+}
+
+.c-third {
+
+  &__article {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  &__article__title {
+    font-size: calc(1rem + .2rem);
+    font-weight: bold;
+  }
+  &__article__subtitle {
+    opacity: 70%;
+    margin-top: -2px;
+    margin-bottom: 4px;
+  }
+  &__article__item {
+    list-style-position: inside;
+  }
+}
+
+.c-fourth {
+  
+  & > * {
+    width: fit-content;
+  }
+  &__article {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__item {
+    padding: .5rem;
+  }
+  &__item {
+    list-style-position: inside;
+    list-style-type: circle;
+  }
+}
+
+.c-tenth {
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    // text-align: center;
+    // justify-content: center;
+  }
+  & > *{
+    text-align: center;
+  }
+  &__brand {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 1rem 1rem;
+    color: var(--text-color);
+    width: 50px;
+    @include from(m) {
+      margin: 1rem 2rem;
+    }
+  }
+  &__description {
+    font-size: var(--small-font-size);
+  }
+}
+
+
+

@@ -1,0 +1,18 @@
+.main-footer {
+  
+  &__container {
+    padding-top   : 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    border-top-width: $border-width;
+    border-top-style: solid;
+    border-top-color: var(--border-color);
+    justify-content: center;
+    text-align: center;
+
+    @include from(m) {
+      padding-top   : 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+}

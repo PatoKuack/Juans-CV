@@ -1,0 +1,124 @@
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  list-style: none;
+
+  &__item {
+    color: var(--text-color);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  &__item:hover {
+    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-B) 80%);
+  }
+
+  &__description {
+    display: inline;
+  }
+  &__icon {
+    display: none;
+
+    @include from(m) {
+      display: inline;
+    }
+  }
+}
+
+.main-nav {
+  position: absolute;
+  width: 80vw;
+  height: calc(100vh - #{$header-height} + #{$border-width});
+  border-right: $border-width solid var(--border-color);
+  border-top: $border-width solid var(--bg-color-B);
+  padding-top: 1rem;
+  top: calc(#{$header-height} - #{$border-width});
+  left: -80vw;
+  transition: left .3s;
+  z-index: var(--z-fixed);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+
+  &.show {
+    left: 0vw;
+  }
+
+  &__glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color-B);
+    opacity: 85%;
+    z-index: var(--z-back);
+  }
+  
+  @include from(m) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(#{$toggle-width} + (#{$margin-left-toggle} * 2) + 1rem);
+    padding-top: calc(#{$header-height} + 1.5rem);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+
+    .main-menu__description {
+      display: none;
+    }
+    .main-menu__icon {
+      display: inline;
+    }
+    
+    &.show {
+      width: auto;
+      .main-menu__icon {
+        display: none;
+      }
+      .main-menu__description {
+        display: inline;
+      }
+    }
+
+  }
+}
+/* --------TOGGLE------------ */
+.main-menu-toggle {
+  width: $toggle-width;
+  height: 1.8rem;
+  margin-left: $margin-left-toggle;
+  position: relative;
+  cursor: pointer;
+  z-index: calc(var(--z-fixed) + 1);
+
+  &::before, &::after {
+    content: '';
+    display: block;
+  }
+  &::before, &::after, &__line {
+    width: 100%;
+    height: 20%;
+    background-color: var(--text-color);
+    position: absolute;
+  }
+
+  &::before {
+    top: 0%;
+  }
+  &__line {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::after {
+    bottom: 0%;
+  }
+
+  @include from(m) {
+    // display: none;
+    position: absolute;
+    left: .5rem;
+    bottom: calc(-50% - .5rem);
+  }
+}
+/* --------------------------- */

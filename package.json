@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "mode-production": "webpack --mode production --config webpack.config.js",
     "mode-development": "webpack --config webpack.config.dev.js",
-    "mode-dev:watch": "webpack --watch --config webpack.config.dev.js "
+    "mode-dev:watch": "webpack --watch --config webpack.config.dev.js",
+    "compile-sass": "node-sass -w ./src/assets/sass -o ./src/styles"
   },
   "repository": {
     "type": "git",

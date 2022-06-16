@@ -1,0 +1,363 @@
+/*!*******************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/stylus-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.css ***!
+  \*******************************************************************************************************************************************************/
+:root {
+/* COLORS */
+/* https://www.w3.org/TR/css-color-3/#svg-color */
+  --text-color: #282828;
+  --border-color: #fffafa;
+  --bg-color-A: #bababa;
+  --bg-color-B: #9f9f9f;
+  --bg-color-hover: #bababa;
+  --a: #9f9f9f;
+  --b: #ffb62d;
+  --c: #fff93f;
+  --d: #fffafa;
+  --e: #282828;
+}
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+:root {
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.1rem;
+  --body-font-size: 0.9rem;
+  --small-font-size: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.3rem;
+    --body-font-size: 1rem;
+    --small-font-size: 0.8rem;
+  }
+}
+:root {
+  --header-height: 3rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --header-height: 4rem;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: var(--text-color);
+  font-size: var(--body-font-size);
+  background-color: var(--bg-color-A);
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  font-size: var(--h1-font-size);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+h3 {
+  font-size: var(--h3-font-size);
+}
+.l-container {
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 0.5rem auto;
+  background-color: var(--bg-color-B);
+}
+.l-complement {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .l-complement {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+.main-header {
+  height: var(--header-height);
+  position: fixed;
+  width: 100%;
+  z-index: var(--z-fixed);
+  top: 0;
+}
+.main-header > * {
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  height: 100%;
+}
+.main-brand {
+  height: calc(var(--header-height) - var(--header-height) / 2);
+  font-size: calc(var(--header-height) - var(--header-height) / 2);
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2.7rem;
+}
+@media screen and (min-width: 768px) {
+  .main-brand {
+    padding-right: 0;
+  }
+}
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  list-style: none;
+}
+.main-menu__item {
+  color: var(--text-color);
+  padding: 1rem;
+  text-align: center;
+}
+.main-menu__item:hover {
+  background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-B) 80%);
+}
+.main-menu__description {
+  display: inline;
+}
+.main-menu__icon {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .main-menu__icon {
+    display: inline;
+  }
+}
+.main-nav {
+  position: absolute;
+  width: 80vw;
+  height: calc(100vh - var(--header-height) + 1px);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--bg-color-B);
+  padding-top: 1rem;
+  top: calc(var(--header-height) - 1px);
+  left: -80vw;
+  transition: left 0.3s;
+  z-index: var(--z-fixed);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.main-nav.show {
+  left: 0vw;
+}
+.main-nav__glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color-B);
+  opacity: 85%;
+  z-index: var(--z-back);
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 4.2rem;
+    padding-top: calc(var(--header-height) + 1.5rem);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+  }
+  .main-nav .main-menu__description {
+    display: none;
+  }
+  .main-nav .main-menu__icon {
+    display: inline;
+  }
+  .main-nav.show {
+    width: auto;
+  }
+  .main-nav.show .main-menu__icon {
+    display: none;
+  }
+  .main-nav.show .main-menu__description {
+    display: inline;
+  }
+}
+/* --------TOGGLE------------ */
+.main-menu-toggle {
+  width: 2.2rem;
+  height: 1.8rem;
+  margin-left: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  z-index: calc(var(--z-fixed) + 1);
+}
+.main-menu-toggle::before,
+.main-menu-toggle::after {
+  content: "";
+  display: block;
+}
+.main-menu-toggle::before,
+.main-menu-toggle::after,
+.main-menu-toggle__line {
+  width: 100%;
+  height: 20%;
+  background-color: var(--text-color);
+  position: absolute;
+}
+.main-menu-toggle::before {
+  top: 0%;
+}
+.main-menu-toggle__line {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-menu-toggle::after {
+  bottom: 0%;
+}
+@media screen and (min-width: 768px) {
+  .main-menu-toggle {
+    position: absolute;
+    left: 0.5rem;
+    bottom: calc(-50% - 0.5rem);
+  }
+}
+/* --------------------------- */
+[class*=c-] > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+[class*=c-] > [class$=__title]:not(.c-third__article__title) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.c-first {
+  margin-top: var(--header-height);
+  padding-top: 4rem;
+  text-align: center;
+  border-top-style: none;
+}
+.c-first__image {
+  border: 3px solid var(--border-color);
+  border-radius: 50%;
+  max-width: 12rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 3.4285714286rem 40px -60px var(--text-color);
+}
+@media screen and (min-width: 768px) {
+  .c-first__image {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+.c-first__title {
+  margin-bottom: 0.2rem;
+}
+.c-first__subtitle {
+  font-size: var(--h3-font-size);
+}
+.c-second__content {
+  text-align: center;
+}
+.c-second__content > * {
+  text-align: left;
+}
+.c-third__article {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.c-third__article__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.c-third__article__subtitle {
+  opacity: 70%;
+  margin-top: -2px;
+  margin-bottom: 4px;
+}
+.c-third__article__item {
+  list-style-position: inside;
+}
+.c-fourth > * {
+  width: fit-content;
+}
+.c-fourth__article {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.c-fourth__item {
+  padding: 0.5rem;
+}
+.c-fourth__item {
+  list-style-position: inside;
+  list-style-type: circle;
+}
+.c-tenth__content {
+  display: flex;
+  flex-direction: row;
+}
+.c-tenth > * {
+  text-align: center;
+}
+.c-tenth__brand {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 1rem 1rem;
+  color: var(--text-color);
+  width: 50px;
+}
+@media screen and (min-width: 768px) {
+  .c-tenth__brand {
+    margin: 1rem 2rem;
+  }
+}
+.c-tenth__description {
+  font-size: var(--small-font-size);
+}
+.main-footer__container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: var(--border-color);
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .main-footer__container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/*!********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/stylus-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/fonts.css ***!
+  \********************************************************************************************************************************************************/
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url(../../assets/fonts/ubuntu-v20-latin-regular2f02effe392a63dc07a5.woff2) format("woff2"), url(../../assets/fonts/ubuntu-v20-latin-regular6a317272decf6d247038.woff) format("woff");
+}
+.body {
+  font-family: "Ubuntu";
+}
+
