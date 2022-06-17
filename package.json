@@ -1,7 +1,7 @@
 {
   "name": "juans_page",
   "version": "1.0.0",
-  "description": "This is like a CV of my best friend",
+  "description": "This is a CV web of my best friend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
