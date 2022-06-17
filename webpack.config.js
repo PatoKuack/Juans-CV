@@ -30,7 +30,7 @@ module.exports = {
         },
       },
       {
-        test: /\.s?css|.styl|.sass$/i,
+        test: /\.(css|scss|styl|sass)$/i,
         use: [MiniCssExtractPlugin.loader,
           'style-loader',
           'css-loader',
@@ -63,7 +63,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "src", "assets/images"),
-          to: "images"
+          to: "assets/images"
         }
       ]
     }),
