@@ -8,4 +8,7 @@ const showMenu = (toggleId, navId) => {
     })
   }
 }
+
+
+// export default showMenu;
 showMenu( 'main-menu-toggle', 'main-nav' );
