@@ -16,25 +16,26 @@
       <div class="main-menu-toggle" id="main-menu-toggle">
         <div class="main-menu-toggle__line"></div>
       </div>
-      <a href="#" class="main-brand">
+      <a href="#c-first" class="main-brand" title="Ir al principio">
         <span class="jam jam-flask main-brand_brand"></span>
       </a>
       <nav class="main-nav" id="main-nav">
         <div class="main-nav__glass"></div>
         <ul class="main-menu">
-          <a class="main-menu__link" href="#" title="Sobre mí"><li class="main-menu__item"><span class="jam jam-user-circle main-menu__icon"></span><span class="main-menu__description">Sobre mí</span></li></a>
-          <a class="main-menu__link" href="#" title="Experiencia"><li class="main-menu__item"><span class="jam jam-document main-menu__icon"></span><span class="main-menu__description">Experiencia</span></li></a>
-          <a class="main-menu__link" href="#" title="Conocimientos"><li class="main-menu__item"><span class="jam jam-save main-menu__icon"></span><span class="main-menu__description">Conocimientos</span></li></a>
-          <a class="main-menu__link" href="#" title="Contacto"><li class="main-menu__item"><span class="jam jam-envelope main-menu__icon"></span><span class="main-menu__description">¡Contactáme!</span></li></a>
+          <a class="main-menu__link" href="#c-second" title="Acerca de mí"><li class="main-menu__item"><span class="jam jam-user-circle main-menu__icon"></span><span class="main-menu__description">Acerca de mí</span></li></a>
+          <a class="main-menu__link" href="#c-third" title="Experiencia"><li class="main-menu__item"><span class="jam jam-document main-menu__icon"></span><span class="main-menu__description">Experiencia</span></li></a>
+          <a class="main-menu__link" href="#c-fourth" title="Conocimientos"><li class="main-menu__item"><span class="jam jam-save main-menu__icon"></span><span class="main-menu__description">Conocimientos</span></li></a>
+          <a class="main-menu__link" href="#c-fifth" title="Contacto"><li class="main-menu__item"><span class="jam jam-envelope main-menu__icon"></span><span class="main-menu__description">¡Contactáme!</span></li></a>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main-content">
     <!-- Foto y presentación -->
-    <section>
+    <section id="c-first" class="main-content-first">
       <div class="l-container l-complement c-first">
         <img class="c-first__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil">
+        <!-- <img class="c-first__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
         <!-- Título -->
         <h1 class="c-first_title">Juan José Lázaro Rodríguez</h1>
         <!-- Subtitle -->
@@ -42,13 +43,15 @@
       </div>
     </section>
     <!-- Sobre mí -->
-    <section>
+    <section id="c-second">
       <div class="l-container l-complement c-second">
         <h2 class="c-second__title">Pefil profecional.</h2>
-        <p class="c-second__content">Cuento con una formación básica en las diversas aplicaciones de la microbiología, experiencia en el área clínica, y en investigación y desarrollo orientado al sector biofarmacéutico, en el cual deseo continuar mi crecimiento profesional.</p>
-        <p class="c-second__content">Mis áreas de interés laboral son el manejo de inmunoensayos, técnicas de biología molecular y el cultivo de células.</p>
+        <div class="c-second__content">
+          <p>Cuento con una formación básica en las diversas aplicaciones de la microbiología, experiencia en el área clínica, y en investigación y desarrollo orientado al sector biofarmacéutico, en el cual deseo continuar mi crecimiento profesional.</p>
+          <p>Mis áreas de interés laboral son el manejo de inmunoensayos, técnicas de biología molecular y el cultivo de células.</p>
+        </div>
         <h2 class="c-second__title">Habilidades.</h2>
-        <ul class="c-second__content">
+        <ul class="c-second__content c-second__list">
           <li>Proactivo, analítico y resolutivo.</li>
           <li>Inglés avanzado.</li>
           <li>Gestión efectiva del tiempo.</li>
@@ -58,7 +61,7 @@
       </div>
     </section>
     <!-- Experiencia -->
-    <section>
+    <section id="c-third">
       <div class="l-container l-complement c-third">
         <h2 class="c-third__title">Experiencia laboral.</h2>
         <article class="c-third__article">
@@ -84,7 +87,7 @@
       </div>
     </section>
     <!-- Conocimientos -->
-    <section>
+    <section id="c-fourth">
       <div class="l-container l-complement c-fourth">
         <h2 class="c-fourth__title">Educación.</h2>
         <div class="c-fourth__container">
@@ -127,22 +130,22 @@
       </div>
     </section>
     <!-- Redes sociales -->
-    <section>
-      <div class="l-container l-complement c-tenth">
-        <h2 class="c-tenth__title">Contacto.</h2>
-        <div class="c-tenth__content">
-          <a class="c-tenth__brand" target="_blank" href="https://www.facebook.com/juan.j.lazaro.9">
+    <section id="c-fifth">
+      <div class="l-container l-complement c-fifth">
+        <h2 class="c-fifth__title">Contacto.</h2>
+        <div class="c-fifth__content">
+          <a class="c-fifth__brand" target="_blank" href="https://www.facebook.com/juan.j.lazaro.9">
             <span class="jam jam-facebook brand" alt="icono de Facebook"></span>
-            <p class="c-tenth__description">Facebook</p>
+            <p class="c-fifth__description">Facebook</p>
           </a>
-          <a class="c-tenth__brand" target="_blank" href="https://www.linkedin.com/in/juan-j-l%C3%A1zaro-rodr%C3%ADguez-943881198/">
+          <a class="c-fifth__brand" target="_blank" href="https://www.linkedin.com/in/juan-j-l%C3%A1zaro-rodr%C3%ADguez-943881198/">
             <span class="jam jam-linkedin brand" alt="icono de Linkedin"></span>
-            <p class="c-tenth__description">Linkedin</p>
+            <p class="c-fifth__description">Linkedin</p>
           </a>
-          <a class="c-tenth__brand" target="_blank" href="#">
+          <!-- <a class="c-fifth__brand" target="_blank" href="#">
             <span class="jam jam-twitter brand" alt="icono de Twitter"></span>
-            <p class="c-tenth__description">Twitter</p>
-          </a>
+            <p class="c-fifth__description">Twitter</p>
+          </a> -->
         </div>
       </div>
     </section>
