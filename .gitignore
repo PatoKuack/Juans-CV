@@ -1,6 +1,6 @@
 *.key
 *.jpg
-# !profilePicture.jpg
+!profilePicture.jpg
 *.png
 *.mp3
 *.mp4
