@@ -6,10 +6,14 @@
   top: 0;
 
   & > * {
-    // justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
+    border-width: $border-width;
+    border-color: var(--border-color);
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
     height: 100%;
+    background-color: var(--bg-color-containerA);
   }
 }
 
@@ -19,6 +23,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-right: calc(#{$toggle-width} + #{$margin-left-toggle});
+  color: var(--text-color);
 
   @include from(m) {
     padding-right: 0;

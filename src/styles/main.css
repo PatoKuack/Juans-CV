@@ -1,16 +1,16 @@
 :root {
   /* COLORS */
   /* https://www.w3.org/TR/css-color-3/#svg-color */
-  --text-color: #282828;
-  --border-color: #fffafa;
-  --bg-color-A: #bababa;
-  --bg-color-B: #9f9f9f;
-  --bg-color-hover: #bababa;
-  --a: #9f9f9f;
-  --b: #ffb62d;
-  --c: #fff93f;
-  --d: #fffafa;
-  --e: #282828; }
+  --text-color: #565757;
+  --border-color: #0b4f66;
+  --bg-color-body: #f0f8ff;
+  --bg-color-containerA: #b9f2ff;
+  --bg-color-containerB: #d7f8ff;
+  --bg-color-hover: #f0f8ff;
+  --a1: #9f9f9f;
+  --a2: #bababa;
+  --b: #fffafa;
+  --c: #282828; }
 
 :root {
   --z-back: -10;
@@ -47,7 +47,7 @@
 body {
   color: var(--text-color);
   font-size: var(--body-font-size);
-  background-color: var(--bg-color-A); }
+  background-color: var(--bg-color-body); }
 
 a {
   text-decoration: none; }
@@ -69,14 +69,14 @@ h3 {
   display: flex;
   max-width: 1200px;
   margin: 0 auto .5rem auto;
-  background-color: var(--bg-color-B); }
+  background-image: linear-gradient(20deg, var(--bg-color-containerA) 50%, var(--bg-color-containerB) 100%); }
 
 .l-complement {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-color);
-  padding-top: 2.5rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
   padding-left: 2rem;
   padding-right: 2rem; }
   @media screen and (min-width: 768px) {
@@ -92,15 +92,21 @@ h3 {
   top: 0; }
   .main-header > * {
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    height: 100%; }
+    border-width: 1px;
+    border-color: var(--border-color);
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    height: 100%;
+    background-color: var(--bg-color-containerA); }
 
 .main-brand {
   height: calc(var(--header-height) - (var(--header-height)/2));
   font-size: calc(var(--header-height) - (var(--header-height)/2));
   margin-left: auto;
   margin-right: auto;
-  padding-right: calc(2.2rem + 0.5rem); }
+  padding-right: calc(2.2rem + 0.5rem);
+  color: var(--text-color); }
   @media screen and (min-width: 768px) {
     .main-brand {
       padding-right: 0; } }
@@ -115,7 +121,7 @@ h3 {
     padding: 1rem;
     text-align: center; }
   .main-menu__item:hover {
-    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-B) 80%); }
+    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-containerA) 80%); }
   .main-menu__description {
     display: inline; }
   .main-menu__icon {
@@ -129,7 +135,8 @@ h3 {
   width: 80vw;
   height: calc(100vh - var(--header-height) + 1px);
   border-right: 1px solid var(--border-color);
-  border-top: 1px solid var(--bg-color-B);
+  border-left: 1px solid var(--border-color);
+  border-top: 1px solid var(--bg-color-containerA);
   padding-top: 1rem;
   top: calc(var(--header-height) - 1px);
   left: -80vw;
@@ -145,13 +152,13 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-B);
+    background-color: var(--bg-color-containerA);
     opacity: 85%;
     z-index: var(--z-back); }
   @media screen and (min-width: 768px) {
     .main-nav {
       position: absolute;
-      left: 0;
+      left: -1px;
       bottom: 0;
       width: calc(2.2rem + (0.5rem * 2) + 1rem);
       padding-top: calc(var(--header-height) + 1.5rem);
@@ -252,11 +259,15 @@ h3 {
 
 .c-third__article__subtitle {
   opacity: 70%;
-  margin-top: -2px;
+  margin-top: -1px;
   margin-bottom: 4px; }
 
 .c-third__article__item {
   list-style-position: inside; }
+
+@media screen and (min-width: 768px) {
+  .c-third__article__subtitle {
+    margin-top: -2px; } }
 
 .c-fourth > * {
   width: fit-content; }
@@ -265,9 +276,7 @@ h3 {
   margin-top: 1rem; }
 
 .c-fourth__item {
-  padding: .2rem; }
-
-.c-fourth__item {
+  padding: .2rem;
   list-style-position: inside;
   list-style-type: circle; }
 
@@ -297,9 +306,10 @@ h3 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 0;
-  border-top-width: 1px;
+  border-width: 1px;
+  border-color: var(--border-color);
   border-top-style: solid;
-  border-top-color: var(--border-color);
+  border-right-style: solid;
   justify-content: center;
   text-align: center; }
   @media screen and (min-width: 768px) {

@@ -11,7 +11,7 @@
   }
   
   &__item:hover {
-    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-B) 80%);
+    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-containerA) 80%);
   }
 
   &__description {
@@ -31,7 +31,8 @@
   width: 80vw;
   height: calc(100vh - #{$header-height} + #{$border-width});
   border-right: $border-width solid var(--border-color);
-  border-top: $border-width solid var(--bg-color-B);
+  border-left: $border-width solid var(--border-color);
+  border-top: $border-width solid var(--bg-color-containerA);
   padding-top: 1rem;
   top: calc(#{$header-height} - #{$border-width});
   left: -80vw;
@@ -50,14 +51,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--bg-color-B);
+    background-color: var(--bg-color-containerA);
     opacity: 85%;
     z-index: var(--z-back);
   }
   
   @include from(m) {
     position: absolute;
-    left: 0;
+    left: -1px;
     bottom: 0;
     width: calc(#{$toggle-width} + (#{$margin-left-toggle} * 2) + 1rem);
     padding-top: calc(#{$header-height} + 1.5rem);
