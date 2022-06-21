@@ -4,9 +4,10 @@
     padding-top   : 1rem;
     padding-bottom: 1rem;
     margin-bottom: 0;
-    border-top-width: $border-width;
+    border-width: $border-width;
+    border-color: var(--border-color);
     border-top-style: solid;
-    border-top-color: var(--border-color);
+    border-right-style: solid;
     justify-content: center;
     text-align: center;
 
