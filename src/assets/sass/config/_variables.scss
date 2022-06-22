@@ -10,25 +10,26 @@ $breackpoints: (
 :root{
   /* COLORS */
   /* https://www.w3.org/TR/css-color-3/#svg-color */
-  // --text-color: #f4fdff;
-  // --border-color: #d7f8ff;
-  // --bg-color-body: #a3a9ac;
-  // --bg-color-containerA: #565757;
-  // --bg-color-containerB: #b1c8cd;
-  // --bg-color-hover: #f0f8ff;
+  // --text-color           : #f4fdff;
+  // --border-color         : #d7f8ff;
+  // --bg-color-body        : #a3a9ac;
+  // --bg-color-containerA  : #565757;
+  // --bg-color-containerB  : #b1c8cd;
+  // --bg-color-hover       : #f0f8ff;
 
-  --text-color: #565757;
-  --border-color: #0b4f66;
-  --bg-color-body: #f0f8ff;
-  --bg-color-containerA: #b9f2ff;
-  --bg-color-containerB: #d7f8ff;
-  --bg-color-hover: #f0f8ff;
+  --text-color          : #333434;
+  --border-color        : #053544;
+  --bg-color-body       : #f0f8ff;
+  --bg-color-containerA : #b9f2ff;
+  --bg-color-containerB : #d7f8ff;
+  --bg-color-hover      : #f0f8ff;
 
   --a1: #9f9f9f;
   --a2: #bababa;
   --b: #fffafa;
   --c: #282828;
- 
+  --x: #6fc8dc;
+  --y: #bfe5f4;
 }
 
 
@@ -60,14 +61,24 @@ $breackpoints: (
 
 //Otros valores:
 :root{
-  --header-height: 3rem;
+  --header-height         : 3rem;
+  --profil-image-width    : 12rem;
+  --padding-top-cfirst    : 5rem;
+  --padding-bottom-cfirst : 6rem;
   @media screen and (min-width: map_get($breackpoints, m)){
-    --header-height: 4rem;
+    --header-height         : 4rem;
+    --profil-image-width    : 14rem;
+    --padding-top-cfirst    : 6rem;
+    --padding-bottom-cfirst : 9rem;
   }
 }
 
-$header-height  : var(--header-height);
-$max-width: 1200px;
-$toggle-width: 2.2rem;
-$border-width: 1px;
-$margin-left-toggle: .5rem;
+$header-height          : var(--header-height);
+$profil-image-width     : var(--profil-image-width);
+$padding-top-cfirst     : var(--padding-top-cfirst);
+$padding-bottom-cfirst  : var(--padding-bottom-cfirst);
+
+$max-width              : 1200px;
+$toggle-width           : 2.2rem;
+$border-width           : 1px;
+$margin-left-toggle     : .5rem;

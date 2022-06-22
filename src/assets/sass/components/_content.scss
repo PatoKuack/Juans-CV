@@ -1,12 +1,5 @@
-$image-width: 12rem;
-$padding-top-cfirst: 4rem;
-@include from(m) {
-  $image-width: 18rem;
-  $padding-top-cfirst: 6rem;
-}
-
-.main-cotent > * {
-  scroll-margin-top: $header-height;
+.main-content > * {
+  scroll-margin-top: calc(#{$header-height} - 1px);
 }
 .main-content-first {
   scroll-margin-top: calc(#{$header-height} + #{$padding-top-cfirst});
@@ -23,20 +16,21 @@ $padding-top-cfirst: 4rem;
 }
 
 .c-first {
-  margin-top: $header-height;
   padding-top: $padding-top-cfirst;
+  padding-bottom: $padding-bottom-cfirst;
+  margin-top: $header-height;
   text-align: center;
   border-top-style: none;
 
   &__image {
     border        : 3px solid var(--border-color);
     border-radius : 50%;
-    max-width     : $image-width;
-    margin-bottom : 1rem;
-    box-shadow: 0px calc(#{$image-width}/3.5) 40px -60px var(--text-color);
+    max-width     : $profil-image-width;
+    margin-bottom : 2rem;
+    box-shadow    : 0px calc(#{$profil-image-width}/3.5) 40px -60px var(--text-color);
     @include from(m) {
       margin-top    : 1rem;
-      margin-bottom : 2rem;
+      margin-bottom : 3rem;
     }
   }
   &__title {
@@ -64,7 +58,7 @@ $padding-top-cfirst: 4rem;
 
   &__article {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   &__article__title {
     font-size: calc(1rem + .2rem);
@@ -72,16 +66,10 @@ $padding-top-cfirst: 4rem;
   }
   &__article__subtitle {
     opacity: 70%;
-    margin-top: -1px;
     margin-bottom: 4px;
   }
   &__article__item {
     list-style-position: inside;
-  }
-  @include from(m) {
-    &__article__subtitle {
-      margin-top: -2px;
-    }
   }
 }
 
@@ -93,12 +81,16 @@ $padding-top-cfirst: 4rem;
   &__article {
     margin-top: 1rem;
   }
-  // &__item {
-  // }
+  &__subtitle {
+    margin: .15rem 0;
+  }
   &__item {
     padding: .2rem;
     list-style-position: inside;
     list-style-type: circle;
+  }
+  &__paragraph {
+    padding: .5rem 0;
   }
 }
 
