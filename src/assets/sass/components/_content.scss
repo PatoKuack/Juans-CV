@@ -75,14 +75,19 @@
 
 .c-fourth {
   
-  & > * {
+  & > *, &__article, &__subsubtitle {
     width: fit-content;
   }
-  &__article {
+  &__content {
     margin-top: 1rem;
   }
   &__subtitle {
     margin: .15rem 0;
+  }
+  &__subsubtitle {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   &__item {
     padding: .2rem;

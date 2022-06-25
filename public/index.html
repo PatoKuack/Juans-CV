@@ -13,7 +13,7 @@
   <!-- ------------------- -->
   <!-- Otros metas: -->
   <meta name="author" content="Pato Kuack">
-  <meta name="description" content="Este es mi CV web, podrás ver quién soy y lo que puedo ofrecer laboralmente. &#129333;">
+  <meta name="description" content="Este es mi CV web, podrás ver quién soy, mi experiencia y lo que puedo ofrecer profecionalmente. &#129333;">
   <meta name="keywords" content="microbiología, clínica, biofarmacéutico, químico, analista, bacteriólogo, parasitólogo">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#6fc8dc #bfe5f4">
@@ -105,42 +105,66 @@
       <div class="l-container l-complement c-fourth">
         <h2 class="c-fourth__title">Educación.</h2>
         <div class="c-fourth__container">
-          <article class="c-fourth__article">
+          <article class="c-fourth__content">
             <p>2014 - 2018 | Titulado</p>
             <h4 class="c-fourth__subtitle">Químico Bacteriólogo Parasitólogo.</h4>
             <p>Escuela Nacional de Ciencias Biológicas.</p>
             <p>Instituto Politécnico Nacional.</p>
           </article>
-          <article class="c-fourth__article">
+          <article class="c-fourth__content">
             <p>2012 | Diploma</p>
             <h4 class="c-fourth__subtitle">Curso de inglés avanzado.</h4>
             <p>Escuela de Lenguas Tuxtla.</p>
             <p>Universidad Autónoma de Chiapas.</p>
           </article>
         </div>
-        <h2 class="c-fourth__title">Capacitaciones y constancias.</h2>
-        <article class="c-fourth__article">
-          <p class="c-fourth__paragraph">2018 | Asistencia al curso teórico-práctico “Pippeting Academy” impartido por Sartorius de México, S.A. de C.V.</p>
-          <p class="c-fourth__paragraph">2019 | Participación en el taller “Análisis e interpretación de la norma ISO 9001:2015” impartido por la Unidad Politécnica para el Desarrollo y la Competitividad Empresarial.</p>
-          <p class="c-fourth__paragraph">2021 | Presentación del cartel “Desarrollo de anticuerpos dirigidos a los componentes de Transferon oral” en el XXIV Congreso Nacional de Inmunología.</p>
-        </article>
-        <h2 class="c-fourth__title">Softwares.</h2>
-        <article class="c-fourth__article">
-          <p class="c-fourth__item">- Herramientas de office (Excel, Word, PowerPoint).</p>
-          <p class="c-fourth__item">-	Suite de Google (Gmail, Docs, Hangouts).</p>
-          <p class="c-fourth__item">-	GraphPad Prism.</p>
-        </article>
-        <h2 class="c-fourth__title">Hardwares.</h2>
-        <article class="c-fourth__article">
-          <UL>
-            <li class="c-fourth__item">Termociclador.</li>
-            <li class="c-fourth__item">Fotodocumentador.</li>
-            <li class="c-fourth__item">Espectrofotómetro.</li>
-            <li class="c-fourth__item">Cabinas de flujo laminar.</li>
-            <li class="c-fourth__item">Microscopio invertido.</li>
-          </UL>
-        </article>
-        
+        <h2 class="c-fourth__title">Conocimientos.</h2>
+        <div class="carousel c-fourth__content">
+          <div class="window" id="carousel-window">
+            <ul class="carousel-container">
+              <li class="carousel-item" id="knowledge-1">
+                <div class="knowledge c-fourth__container">
+                  <h3 class="c-fourth__subsubtitle">Capacitaciones y constancias.</h3>
+                  <article class="c-fourth__article">
+                    <p class="c-fourth__paragraph">2018 | Asistencia al curso teórico-práctico “Pippeting Academy” impartido por Sartorius de México, S.A. de C.V.</p>
+                    <p class="c-fourth__paragraph">2019 | Participación en el taller “Análisis e interpretación de la norma ISO 9001:2015” impartido por la Unidad Politécnica para el Desarrollo y la Competitividad Empresarial.</p>
+                    <p class="c-fourth__paragraph">2021 | Presentación del cartel “Desarrollo de anticuerpos dirigidos a los componentes de Transferon oral” en el XXIV Congreso Nacional de Inmunología.</p>
+                  </article>
+                </div>
+              </li>
+              <li class="carousel-item" id="knowledge-2">
+                <div class="knowledge c-fourth__container">
+                  <h3 class="c-fourth__subsubtitle">Hardwares.</h3>
+                  <article class="c-fourth__article">
+                    <UL>
+                      <li class="c-fourth__item">Termociclador.</li>
+                      <li class="c-fourth__item">Fotodocumentador.</li>
+                      <li class="c-fourth__item">Espectrofotómetro.</li>
+                      <li class="c-fourth__item">Cabinas de flujo laminar.</li>
+                      <li class="c-fourth__item">Microscopio invertido.</li>
+                    </UL>
+                  </article>
+                </div>
+              </li>
+              <li class="carousel-item" id="knowledge-3">
+                <div class="knowledge c-fourth__container">
+                  <h3 class="c-fourth__subsubtitle">Softwares.</h3>
+                  <article class="c-fourth__article">
+                    <p class="c-fourth__item">- Herramientas de office (Excel, Word, PowerPoint).</p>
+                    <p class="c-fourth__item">-	Suite de Google (Gmail, Docs, Hangouts).</p>
+                    <p class="c-fourth__item">-	GraphPad Prism.</p>
+                  </article>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="arrow arrow-left" id="arrow-left" aria-label="backward button">
+            <span class="jam jam-arrow-left"></span>
+          </button>
+          <button class="arrow arrow-right" id="arrow-right" aria-label="forward button">
+            <span class="jam jam-arrow-right"></span>
+          </button>
+        </div>
       </div>
     </section>
     <!-- Redes sociales -->
@@ -167,9 +191,10 @@
   <!-- Footer -->
   <footer class="main-footer">
     <div class="l-container main-footer__container">
-      <p>copyright Jun 18th 2022 - Juan J Lázaro Rodríguez </p>
+      <p>copyright Jun 18th 2022 - Juan J. Lázaro Rodríguez </p>
     </div>
   </footer>
-  <!-- <script src="../src/utils/showMenu.js"></script> -->
+  <!-- <script src="../src/utils/showMenu.js"></script>
+  <script src="../src/utils/carousel.js"></script> -->
 </body>
 </html>

@@ -60,7 +60,7 @@
     position: absolute;
     left: -1px;
     bottom: 0;
-    width: calc(#{$toggle-width} + (#{$margin-left-toggle} * 2) + 1rem);
+    width: calc(#{$toggle-width} + (#{$margin-left-toggle} * 2));
     padding-top: calc(#{$header-height} + 1.5rem);
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
@@ -117,9 +117,8 @@
   }
 
   @include from(m) {
-    // display: none;
     position: absolute;
-    left: .5rem;
+    // left: 5rem;
     bottom: calc(-50% - .5rem);
   }
 }

@@ -2,5 +2,6 @@
 import './styles/fonts.css';
 import './styles/main.css';
 import './utils/showMenu.js';
+import './utils/carousel.js';
 
 // showMenu( 'main-menu-toggle', 'main-nav' );

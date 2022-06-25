@@ -1,0 +1,138 @@
+:root {
+  --separate-window : 1rem;
+  --arrow-size      : 75px;
+  --width-window    : 280px;
+  @include from(m) {
+    --width-window  : 540px;
+  }
+}
+
+
+.carousel {
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--bg-carousel);
+    
+  &-item {
+    display: inline-block;
+    list-style: none;
+  }
+}
+
+.window {
+  overflow: hidden;
+  padding: var(--separate-window) 0;
+  width: var(--width-window);
+}
+
+.carousel-container {
+
+  position: relative;
+  left: 0;
+  width: 1500px;
+  display: flex;
+  
+  // & [class^="knowledge-"]:focus-within {
+  //   outline: 3px solid var(--verde);
+  // }
+}
+
+
+
+.knowledge {
+  border: $border-width solid var(--border-color);
+  display: inline-block;
+  min-height: 100%;
+  margin: 0 var(--separate-window);
+  padding: var(--separate-window);
+  padding-bottom: calc(var(--separate-window) * 3);
+  object-fit: cover;
+  // transition: transform 0.2s ease-in-out;
+  width: calc(var(--width-window) - (var(--separate-window) * 2));
+  background-image: linear-gradient(20deg, var(--bg-color-containerA) 30%, var(--bg-color-containerB) 100%);
+  
+  @include from(m) {
+    padding: var(--separate-window) calc(var(--separate-window) * 2);
+    min-height: 500px;
+  }
+
+  // &:hover {
+  //   cursor: pointer;
+  //   transform: scale(1.1);
+  // }
+}
+
+
+.arrow {
+
+  display: none;
+  @include from(m) {
+    display: block;
+  }
+
+  height: var(--arrow-size);
+  width: var(--arrow-size);
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  background-image: radial-gradient(circle at 100% -100%, var(--bg-carousel-arrow) 80%, var(--bg-color-containerB));
+  border-color: var(--bg-carousel);
+  border-radius: 50%;
+  cursor: pointer;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+  & > * {
+    font-size: 50px;
+  }
+  &-left {
+    left: calc((var(--arrow-size) - (var(--arrow-size) * 2)) / 1.5);
+  }
+  &-right {
+    right: calc((var(--arrow-size) - (var(--arrow-size) * 2)) / 1.5);
+  }
+  
+}
+
+
+
+
+// .arrow:focus {
+//   outline: 3px solid var(--verde);
+// }
+
+// .modal-container {
+//   align-items: center;
+//   background-color: rgba(000, 000, 000, 0.2);
+//   display: none;
+//   height: 100vh;
+//   justify-content: center;
+//   position: fixed;
+//   width: 100vw;
+// }
+
+// .modal {
+//   align-items: center;
+//   background-color: var(--gris-oscuro);
+//   border-radius: 5px;
+//   border: 2px solid #000;
+//   display: flex;
+//   flex-direction: column;
+//   height: 700px;
+//   justify-content: center;
+//   position: fixed;
+//   top: 15%;
+//   width: 700px;
+// }
+
+// .modal-project-image {
+//   background: center / cover no-repeat url(./images/project1.png);
+//   border-radius: 5px;
+//   border: 2px solid #000;
+//   height: 400px;
+//   margin: 16px;
+//   width: 550px;
+// }
