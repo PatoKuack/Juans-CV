@@ -23,17 +23,17 @@ module.exports = {
   /* devServer: {
     port: 5000
   }, */
-  module: {
-    loaders: [
-      {
-        test: /\.php$/,
-        loaders: [
-          'html-minify',
-          'php-loader'
-        ]
-      },
-    ],
-  },
+  // module: {
+  //   loaders: [
+  //     {
+  //       test: /\.php$/,
+  //       loaders: [
+  //         'html-minify',
+  //         'php-loader'
+  //       ]
+  //     },
+  //   ],
+  // },
   module: {
     rules: [
       {
@@ -71,7 +71,7 @@ module.exports = {
         generator: {
           filename: 'assets/fonts/[name][contenthash][ext][query]',
         },
-      }
+      },
     ]
   },
   plugins: [

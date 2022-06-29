@@ -35,7 +35,7 @@
   border-top: $border-width solid var(--bg-color-containerA);
   padding-top: 1rem;
   top: calc(#{$header-height} - #{$border-width});
-  left: -80vw;
+  left: calc(-80vw - #{$border-width});
   transition: left .3s;
   z-index: var(--z-fixed);
   -webkit-backdrop-filter: blur(2px);

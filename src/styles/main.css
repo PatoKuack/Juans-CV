@@ -1,9 +1,9 @@
 :root {
   /* COLORS */
   /* https://www.w3.org/TR/css-color-3/#svg-color */
-  --text-color: #f4fdff;
+  --text-color: #fffffff5;
   --selection: #e6daad58;
-  --border-color: #d7f8ff;
+  --border-color: #ececec;
   --bg-color-body: #a3a9ac;
   --bg-color-containerA: #565757;
   --bg-color-containerB: #b1c8cd;
@@ -82,8 +82,7 @@ h3 {
   position: relative;
   display: flex;
   max-width: 1200px;
-  margin: 0 auto .5rem auto;
-  background-image: linear-gradient(30deg, var(--bg-color-containerA) 55%, var(--bg-color-containerB) 100%); }
+  margin: 0 auto .5rem auto; }
 
 .l-complement {
   display: flex;
@@ -97,6 +96,9 @@ h3 {
     .l-complement {
       padding-top: 3rem;
       padding-bottom: 8rem; } }
+
+.l-container {
+  background-image: linear-gradient(30deg, var(--bg-color-containerA) 55%, var(--bg-color-containerB) 100%); }
 
 [class^="decoration__"] {
   position: absolute;
@@ -200,7 +202,7 @@ h3 {
   border-top: 1px solid var(--bg-color-containerA);
   padding-top: 1rem;
   top: calc(var(--header-height) - 1px);
-  left: -80vw;
+  left: calc(-80vw - 1px);
   transition: left .3s;
   z-index: var(--z-fixed);
   -webkit-backdrop-filter: blur(2px);
