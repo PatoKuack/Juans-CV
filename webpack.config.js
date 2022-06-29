@@ -23,17 +23,17 @@ module.exports = {
   /* devServer: {
     port: 5000
   }, */
-  // module: {
-  //   loaders: [
-  //     {
-  //       test: /\.php$/,
-  //       loaders: [
-  //         'html-minify',
-  //         'php-loader'
-  //       ]
-  //     },
-  //   ],
-  // },
+  module: {
+    loaders: [
+      {
+        test: /\.php$/,
+        loaders: [
+          'html-minify',
+          'php-loader'
+        ]
+      },
+    ],
+  },
   module: {
     rules: [
       {
@@ -50,6 +50,13 @@ module.exports = {
           'css-loader',
           'stylus-loader',
           'sass-loader']
+      },
+      {
+        test: /\.php$/,
+        type: "asset/resource",
+        generator: {
+          filename: 'assets/utils/[name][ext]',
+        },
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,

@@ -51,6 +51,13 @@ module.exports = {
           'sass-loader']
       },
       {
+        test: /\.php$/,
+        type: "asset/resource",
+        generator: {
+          filename: 'assets/utils/[name][ext]',
+        },
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
