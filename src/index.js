@@ -2,9 +2,11 @@
 import './styles/fonts.css';
 // import './styles/main.css';
 import './assets/sass/main.scss';
+
 import './utils/showMenu.js';
 import './utils/carousel.js';
 import './utils/theme-cubic.js';
-import './utils/form.php';
+
+import './utils/success.php';
 
 // showMenu( 'main-menu-toggle', 'main-nav' );
