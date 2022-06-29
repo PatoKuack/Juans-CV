@@ -172,7 +172,14 @@
       <div class="l-container l-complement c-fifth">
         <h2 class="c-fifth__title">Información de contacto.</h2>
         <div class="form">
-          <form action="./assets/utils/form.php" method="post" enctype="multipart/form-data">
+          <form name="contact" method="POST" data-netlify="true">
+            <p><label>Nombre: <input type="text" name="name" /></label></p>
+            <p><label>E-mail: <input type="email" name="email" /></label></p>
+            <p><label>Mensaje: <textarea name="message"></textarea></label></p>
+            <p><button type="submit">Mandar</button></p>
+          </form>          
+          <!-- -------------------------- -->
+          <!-- <form action="./assets/utils/form.php" method="post" enctype="multipart/form-data">
             <h3 class="form-subtitle">¡Mandame un e-mail!</h3>
             <div class="form-input">
               <label for="formName">Nombre:</label>
@@ -199,7 +206,7 @@
             <?php if($status == "success"): ?>
               <div class="alert success"><span>¡¡¡El correo fue mandadó!!! =D<br/>Obtendrá mi respuesta lo antes posible >_,o</span></div>
             <?php endif; ?> -->
-          </form>
+          </form> -->
         </div>
         <div class="information">
           <p class="information-description"><span class="jam jam-inbox"></span> Juancho@cacahuate.com</p>
