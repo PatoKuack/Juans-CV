@@ -1,4 +1,8 @@
 *.key
+*.docx
+*.pdf
+!CVJuan.php
+
 *.jpg
 !profilePicture.jpg
 *.png

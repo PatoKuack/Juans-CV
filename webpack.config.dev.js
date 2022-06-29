@@ -19,6 +19,20 @@ module.exports = {
       // '@nombre_del_alias': path.resolve(__dirname, 'ruta/de/carpetas/'),
     }
   },
+  // devServer: {
+  //   port: 5000
+  // },
+  module: {
+    loaders: [
+      {
+        test: /\.php$/,
+        loaders: [
+          'html-minify',
+          'php-loader'
+        ]
+      },
+    ],
+  },
   module: {
     rules: [
       {
@@ -44,6 +58,13 @@ module.exports = {
         },
       },
       {
+        test: /\.(pdf|docx)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: 'assets/docs/[name][contenthash][ext][query]',
+        },
+      },
+      {
         test: /\.(woff|woff2)$/i,
         type: 'asset/resource',
         generator: {
@@ -64,10 +85,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src", "assets/images"),
-          to: "images"
+          from: path.resolve(__dirname, "src", "assets"),
+          to: "assets"
         }
-      ]
+      ],
     }),
     new Dotenv(),
   ],
