@@ -7,6 +7,4 @@ import './utils/showMenu.js';
 import './utils/carousel.js';
 import './utils/theme-cubic.js';
 
-import './utils/success.php';
-
 // showMenu( 'main-menu-toggle', 'main-nav' );

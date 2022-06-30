@@ -20,7 +20,7 @@
   <!-- ------------------- -->
   <!-- estilos -->
   <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
-  <!-- <link rel="stylesheet" href="../src/styles/main.css"> -->
+  <link rel="stylesheet" href="../src/styles/main.css">
   <!-- ------------------- -->
   <title>Juan's CV</title>
 </head>
@@ -47,10 +47,10 @@
   </header>
   <main id="main-content" class="main-content">
     <!-- Foto y presentación -->
-    <section id="c-first" class="main-content-first">
+    <section id="c-first" class="content-first">
       <div class="l-container l-complement c-first">
-        <img class="c-first__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil">
-        <!-- <img class="c-first__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
+        <!-- <img class="c-first__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
+        <img class="c-first__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil">
         <!-- Título -->
         <h1 class="c-first_title">Juan José Lázaro Rodríguez</h1>
         <!-- Subtitle -->
@@ -172,11 +172,11 @@
       <div class="l-container l-complement c-fifth">
         <h2 class="c-fifth__title">Información de contacto.</h2>
         <div class="form">
-          <form name="contact" method="POST" data-netlify="true" action="./assets/utils/success.php">
+          <form name="contact" method="POST" data-netlify="true">
             <p><label>Nombre: <input type="text" name="name" /></label></p>
             <p><label>E-mail: <input type="email" name="email" /></label></p>
-            <p><label>Mensaje: <textarea name="message"></textarea></label></p>
-            <p><button type="submit">Mandar</button></p>
+            <p><label>Mensaje: <textarea name="message" cols="30" rows="10"></textarea></label></p>
+            <p><button type="submit">Enviar</button></p>
           </form>
         </div>
         <div class="information">
@@ -213,8 +213,8 @@
       <p>copyright Jun 18th 2022 - Juan J. Lázaro Rodríguez </p>
     </div>
   </footer>
-  <!-- <script src="../src/utils/showMenu.js"></script>
+  <script src="../src/utils/showMenu.js"></script>
   <script src="../src/utils/carousel.js"></script>
-  <script src="../src/utils/theme-cubic.js"></script> -->
+  <script src="../src/utils/theme-cubic.js"></script>
 </body>
 </html>

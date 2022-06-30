@@ -6,7 +6,7 @@
 .main-content > * {
   scroll-margin-top: calc(#{$header-height} - 1px);
 }
-.main-content-first {
+.content-first {
   scroll-margin-top: calc(#{$header-height} + #{$padding-top-cfirst});
 }
 
@@ -34,6 +34,7 @@
     max-width     : $profil-image-width;
     margin-bottom : 2rem;
     box-shadow    : 0px calc(#{$profil-image-width}/3.5) 40px -60px var(--text-color);
+    z-index: var(--z-normal);
     @include from(m) {
       margin-top    : 1rem;
       margin-bottom : 3rem;
@@ -86,6 +87,7 @@
   }
   &__content {
     margin-top: 1rem;
+    z-index: var(--z-normal);
   }
   &__subtitle {
     margin: .15rem 0;
@@ -111,6 +113,7 @@
     text-align: center;
   }
 }
+
 .information {
   margin-top: 1rem;
 }

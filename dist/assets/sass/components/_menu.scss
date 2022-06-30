@@ -42,7 +42,7 @@
   backdrop-filter: blur(2px);
 
   &.show {
-    left: 0vw;
+    left: calc(0vw - #{$border-width});
   }
 
   &__glass {
