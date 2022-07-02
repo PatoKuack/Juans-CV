@@ -30,14 +30,16 @@
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.1rem;
   --body-font-size: .9rem;
-  --small-font-size: .75rem; }
+  --small-font-size: .75rem;
+  --line-height: 1.2rem; }
   @media screen and (min-width: 768px) {
     :root {
       --h1-font-size: 2rem;
       --h2-font-size: 1.5rem;
       --h3-font-size: 1.3rem;
       --body-font-size: 1rem;
-      --small-font-size: .8rem; } }
+      --small-font-size: .8rem;
+      --line-height: 1.3rem; } }
 
 :root {
   --header-height: 3rem;
@@ -81,10 +83,7 @@ h3 {
   font-size: var(--h3-font-size); }
 
 p, ul {
-  line-height: 1.1rem; }
-  @media screen and (min-width: 768px) {
-    p, ul {
-      line-height: 1.2rem; } }
+  line-height: var(--line-height); }
 
 .l-container {
   position: relative;

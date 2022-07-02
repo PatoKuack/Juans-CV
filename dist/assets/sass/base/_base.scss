@@ -36,9 +36,5 @@ h3 {
 }
 
 p, ul {
-  line-height: 1.1rem;
-
-  @include from(m) {
-    line-height: 1.2rem;
-  }
+  line-height: var(--line-height);
 }
