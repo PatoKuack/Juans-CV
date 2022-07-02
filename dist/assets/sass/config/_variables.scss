@@ -10,12 +10,12 @@ $breackpoints: (
 :root{
   /* COLORS */
   /* https://www.w3.org/TR/css-color-3/#svg-color */
-  --text-color            : #fffffff5;
+  --text-color            : #edf5f6f5;
   --selection             : #e6daad58;
-  --border-color          : #ececec;
+  --border-color          : #e2e6e8;
   --bg-color-body         : #a3a9ac;
   --bg-color-containerA   : #565757;
-  --bg-color-containerB   : #b1c8cd;
+  --bg-color-containerB   : #9aafb4;
   --bg-color-containerC   : #676868;
   --bg-color-hover        : #f0f8ff;
 
@@ -25,8 +25,8 @@ $breackpoints: (
   // --bg-color-containerA : #b9f2ff;
   // --bg-color-containerB : #d7f8ff;
   // --bg-color-hover      : #f0f8ff;
-  // --bg-carousel         : #8a1dc520;
-  // --bg-carousel-arrow   : #c4d0ff;
+  --bg-carousel         : #8a1dc520;
+  --bg-carousel-arrow   : #c4d0ff;
 
   --a1: #9f9f9f;
   --a2: #bababa;

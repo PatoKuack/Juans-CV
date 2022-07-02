@@ -23,7 +23,7 @@ module.exports = {
   /* devServer: {
     port: 5000
   }, */
-  module: {
+  /* module: {
     loaders: [
       {
         test: /\.php$/,
@@ -33,7 +33,7 @@ module.exports = {
         ]
       },
     ],
-  },
+  }, */
   module: {
     rules: [
       {

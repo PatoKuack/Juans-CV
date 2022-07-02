@@ -13,12 +13,16 @@
   display: flex;
   position: relative;
   align-items: center;
-  border-radius: 5px;
-  background-color: var(--bg-carousel);
     
   &-item {
     display: inline-block;
     list-style: none;
+  }  
+  &-container {
+    position: relative;
+    left: 0;
+    width: 1500px;
+    display: flex;
   }
 }
 
@@ -28,34 +32,23 @@
   width: var(--width-window);
 }
 
-.carousel-container {
-
-  position: relative;
-  left: 0;
-  width: 1500px;
-  display: flex;
-  
-  // & [class^="knowledge-"]:focus-within {
-  //   outline: 3px solid var(--verde);
-  // }
-}
-
-
 
 .knowledge {
   border: $border-width solid var(--border-color);
   display: inline-block;
   min-height: 100%;
-  margin: 0 var(--separate-window);
-  padding: var(--separate-window);
+  // margin: 0 calc(var(--separate-window)/2);
+  // padding: var(--separate-window);
+  padding: var(--separate-window) calc(var(--separate-window) * 1.5);
   padding-bottom: calc(var(--separate-window) * 3);
   object-fit: cover;
   // transition: transform 0.2s ease-in-out;
-  width: calc(var(--width-window) - (var(--separate-window) * 2));
-  background-image: linear-gradient(20deg, var(--bg-color-containerA) 30%, var(--bg-color-containerB) 100%);
+  // width: calc(var(--width-window) - var(--separate-window));
+  width: var(--width-window);
+  background-image: linear-gradient(50deg, var(--bg-color-containerA) 50%, var(--bg-color-containerB) 100%);
   
   @include from(m) {
-    padding: var(--separate-window) calc(var(--separate-window) * 2);
+    padding: var(--separate-window) calc(var(--separate-window) * 4);
     min-height: 500px;
   }
 
@@ -77,8 +70,8 @@
   width: var(--arrow-size);
   transition: transform 0.2s ease-in-out;
   position: absolute;
-  background-image: radial-gradient(circle at 100% -100%, var(--bg-carousel-arrow) 80%, var(--bg-color-containerB));
-  border-color: var(--bg-carousel);
+  background-image: radial-gradient(circle at 100% -100%, var(--border-color), var(--bg-color-containerB));
+  border-color: var(--bg-color-containerB);
   border-radius: 50%;
   cursor: pointer;
   

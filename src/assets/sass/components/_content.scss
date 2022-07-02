@@ -70,13 +70,15 @@
   &__article__title {
     font-size: calc(1rem + .2rem);
     font-weight: bold;
+    line-height: inherit;
   }
   &__article__subtitle {
     opacity: 70%;
     margin-bottom: 4px;
   }
   &__article__item {
-    list-style-position: inside;
+    padding-top: .5rem;
+    margin-left: 1rem;
   }
 }
 
@@ -86,7 +88,7 @@
     width: fit-content;
   }
   &__content {
-    margin-top: 1rem;
+    margin-top: .5rem;
     z-index: var(--z-normal);
   }
   &__subtitle {
@@ -99,7 +101,7 @@
   }
   &__item {
     padding: .2rem;
-    list-style-position: inside;
+    margin-left: 1rem;
     list-style-type: circle;
   }
   &__paragraph {

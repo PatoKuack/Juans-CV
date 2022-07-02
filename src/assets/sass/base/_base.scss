@@ -34,3 +34,11 @@ h2 {
 h3 {
   font-size: var(--h3-font-size);
 }
+
+p, ul {
+  line-height: 1.1rem;
+
+  @include from(m) {
+    line-height: 1.2rem;
+  }
+}
