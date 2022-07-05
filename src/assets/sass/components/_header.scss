@@ -7,23 +7,37 @@
 
   & > * {
     align-items: center;
+    // align-content: center;
     border-width: $border-width;
     border-color: var(--border-color);
     border-style: none solid solid solid;
     height: 100%;
     background-color: var(--bg-color-containerA);
   }
+  @include from(m) {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      // align-items: center;
+      // align-content: center;
+    }
+  }
 }
 
 .main-brand {
   height: calc(#{$header-height} - (#{$header-height}/2));
   font-size: calc(#{$header-height} - (#{$header-height}/2));
+  color: var(--text-color);
   margin-left: auto;
   margin-right: auto;
   padding-right: calc(#{$toggle-width} + #{$margin-left-toggle});
-  color: var(--text-color);
-
+  
   @include from(m) {
-    padding-right: 0;
+    margin-left: $toggle-width;
+    margin-right: 0;
+
+    & + * {
+      margin-right: $toggle-width;
+    }
   }
 }

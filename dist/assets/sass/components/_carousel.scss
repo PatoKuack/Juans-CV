@@ -39,7 +39,7 @@
   min-height: 100%;
   // margin: 0 calc(var(--separate-window)/2);
   // padding: var(--separate-window);
-  padding: var(--separate-window) calc(var(--separate-window) * 1.5);
+  padding: calc(var(--separate-window) / 2) calc(var(--separate-window) * 1.5);
   padding-bottom: calc(var(--separate-window) * 3);
   object-fit: cover;
   // transition: transform 0.2s ease-in-out;

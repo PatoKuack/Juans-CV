@@ -1,6 +1,37 @@
 .form {
   border: $border-width solid var(--border-color);
   margin-top: 2rem;
-  padding: 1rem;
-  // max-width: 450px;
+  padding: 2rem;
+  max-width: 400px;
+  
+  @include from(m) {
+    padding: 2rem 4rem;
+    width: 450px;
+  }
+
+  &-container {
+    width: fit-content;
+    text-align: left;
+  }
+  &-container > * {
+    margin-top: .5rem;
+  }
+  &__input {
+    background-color: var(--bg-color-containerA);
+    color: var(--text-color);
+    width: 100%;
+    padding: .1rem .3rem;
+    border-color: var(--border-color);
+    text-align: left;
+  }
+  &__input:not(textarea) {
+    margin-left: .5rem;
+  }
+  &__label {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    text-align: center;
+  }
 }

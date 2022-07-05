@@ -25,8 +25,8 @@ $breackpoints: (
   // --bg-color-containerA : #b9f2ff;
   // --bg-color-containerB : #d7f8ff;
   // --bg-color-hover      : #f0f8ff;
-  --bg-carousel         : #8a1dc520;
-  --bg-carousel-arrow   : #c4d0ff;
+  --bg-carousel           : #8a1dc520;
+  --bg-carousel-arrow     : #c4d0ff;
 
   --a1: #9f9f9f;
   --a2: #bababa;
@@ -67,22 +67,22 @@ $breackpoints: (
 
 //Otros valores:
 :root{
-  --header-height         : 3rem;
-  --profil-image-width    : 12rem;
-  --padding-top-cfirst    : 5rem;
-  --padding-bottom-cfirst : 6rem;
+  --header-height               : 3rem;
+  --profil-image-width          : 12rem;
+  --padding-top-cpresentation   : 5rem;
+  --padding-bottom-cpresentation: 6rem;
   @media screen and (min-width: map_get($breackpoints, m)){
-    --header-height         : 4rem;
-    --profil-image-width    : 14rem;
-    --padding-top-cfirst    : 6rem;
-    --padding-bottom-cfirst : 9rem;
+    --header-height               : 4rem;
+    --profil-image-width          : 14rem;
+    --padding-top-cpresentation   : 6rem;
+    --padding-bottom-cpresentation: 9rem;
   }
 }
 
-$header-height          : var(--header-height);
-$profil-image-width     : var(--profil-image-width);
-$padding-top-cfirst     : var(--padding-top-cfirst);
-$padding-bottom-cfirst  : var(--padding-bottom-cfirst);
+$header-height                : var(--header-height);
+$profil-image-width           : var(--profil-image-width);
+$padding-top-cpresentation    : var(--padding-top-cpresentation);
+$padding-bottom-cpresentation : var(--padding-bottom-cpresentation);
 
 $max-width              : 1200px;
 $toggle-width           : 2.2rem;

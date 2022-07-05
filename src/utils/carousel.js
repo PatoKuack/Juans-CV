@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   document.getElementById('arrow-left').addEventListener('click', clickLeft);
   document.getElementById('arrow-right').addEventListener('click', clickRight);
   
-  document.querySelector('.c-fourth').addEventListener('keydown', e => {
+  document.querySelector('.c-knowledge').addEventListener('keydown', e => {
     switch(e.key) {
       case 'ArrowLeft':
         clickLeft();

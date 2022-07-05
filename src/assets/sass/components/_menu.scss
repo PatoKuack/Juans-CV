@@ -1,41 +1,39 @@
 .main-menu {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-right: 0;
   list-style: none;
 
-  &__item {
-    color: var(--text-color);
+  &__link:hover {
+    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-containerA) 80%);
+  }
+  &__link {
+    display: block;
     padding: 1rem;
     text-align: center;
   }
-  
-  &__item:hover {
-    background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-containerA) 80%);
-  }
 
-  &__description {
-    display: inline;
-  }
-  &__icon {
-    display: none;
+  @include from(m) {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 
-    @include from(m) {
-      display: inline;
+    &__link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 1rem;
     }
   }
 }
 
 .main-nav {
   position: absolute;
-  width: 80vw;
-  height: calc(100vh - #{$header-height} + #{$border-width});
-  border-right: $border-width solid var(--border-color);
-  border-left: $border-width solid var(--border-color);
-  border-top: $border-width solid var(--bg-color-containerA);
-  padding-top: 1rem;
   top: calc(#{$header-height} - #{$border-width});
   left: calc(-80vw - #{$border-width});
+  width: 80vw;
+  height: calc(100vh - #{$header-height} + #{$border-width});
+  border: $border-width solid var(--border-color);
+  border-top-color: var(--bg-color-containerA);
+  border-bottom-style: none;
+  padding-top: 1rem;
   transition: left .3s;
   z-index: var(--z-fixed);
   -webkit-backdrop-filter: blur(2px);
@@ -57,32 +55,17 @@
   }
   
   @include from(m) {
-    position: absolute;
-    left: -1px;
-    bottom: 0;
-    width: calc(#{$toggle-width} + (#{$margin-left-toggle} * 2));
-    padding-top: calc(#{$header-height} + 1.5rem);
+    position: static;
+    width: auto;
+    height: 100%;
+    padding-top: 0;
+    border-style: none;
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
 
-    .main-menu__description {
+    &__glass {
       display: none;
     }
-    .main-menu__icon {
-      display: inline;
-    }
-    
-    &.show {
-      width: auto;
-      left: -1px;
-      .main-menu__icon {
-        display: none;
-      }
-      .main-menu__description {
-        display: inline;
-      }
-    }
-
   }
 }
 /* --------TOGGLE------------ */
@@ -117,9 +100,7 @@
   }
 
   @include from(m) {
-    position: absolute;
-    // left: 5rem;
-    bottom: calc(-50% - .5rem);
+    display: none;
   }
 }
 /* --------------------------- */

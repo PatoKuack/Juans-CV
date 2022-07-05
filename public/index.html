@@ -20,53 +20,55 @@
   <!-- ------------------- -->
   <!-- estilos -->
   <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
-  <!-- <link rel="stylesheet" href="../src/styles/main.css"> -->
+  <link rel="stylesheet" href="../src/styles/main.css">
   <!-- ------------------- -->
   <title>Juan's CV</title>
 </head>
-<body class="body">
+<body id="body" class="body">
   <!-- Logo y menú de navegación. -->
   <header class="main-header">
     <div class="l-container main-header__container">
       <div class="main-menu-toggle" id="main-menu-toggle">
         <div class="main-menu-toggle__line"></div>
       </div>
-      <a href="#c-first" class="main-brand" title="Ir al principio">
+      <a href="#c-presentation" class="main-brand" title="Ir al principio">
         <span class="jam jam-flask main-brand_brand"></span>
       </a>
       <nav class="main-nav" id="main-nav">
         <div class="main-nav__glass"></div>
         <ul class="main-menu">
-          <a class="main-menu__link" href="#c-second" title="Acerca de mí"><li class="main-menu__item"><span class="jam jam-user-circle main-menu__icon"></span><span class="main-menu__description">Acerca de mí</span></li></a>
-          <a class="main-menu__link" href="#c-third" title="Experiencia"><li class="main-menu__item"><span class="jam jam-document main-menu__icon"></span><span class="main-menu__description">Experiencia</span></li></a>
-          <a class="main-menu__link" href="#c-fourth" title="Conocimientos"><li class="main-menu__item"><span class="jam jam-save main-menu__icon"></span><span class="main-menu__description">Conocimientos</span></li></a>
-          <a class="main-menu__link" href="#c-fifth" title="Contacto"><li class="main-menu__item"><span class="jam jam-envelope main-menu__icon"></span><span class="main-menu__description">¡Contactáme!</span></li></a>
+          <li class="main-menu__item"><a class="main-menu__link" href="#c-aboutme" title="Acerca de mí">Acerca de mí</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#c-experience" title="Experiencia">Experiencia</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#c-knowledge" title="Conocimientos">Conocimientos</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#c-contact" title="Contacto">¡Contactáme!</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main id="main-content" class="main-content">
     <!-- Foto y presentación -->
-    <section id="c-first" class="content-first">
-      <div class="l-container l-complement c-first">
-        <img class="c-first__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil">
-        <!-- <img class="c-first__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
-        <!-- Título -->
-        <h1 class="c-first_title">Juan José Lázaro Rodríguez</h1>
-        <!-- Subtitle -->
-        <h2 class="c-first_subtitle">Químico Analista</h2>
+    <section id="c-presentation">
+      <div class="l-container l-complement c-presentation">
+        <div class="c-presentation-content">
+          <!-- <img class="c-presentation__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
+          <img class="c-presentation__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil">
+          <!-- Título -->
+          <h1 class="c-presentation__title">Juan José Lázaro Rodríguez</h1>
+          <!-- Subtitle -->
+          <h2 class="c-presentation__subtitle">Químico Analista</h2>
+        </div>
       </div>
     </section>
     <!-- Sobre mí -->
-    <section id="c-second">
-      <div class="l-container l-complement c-second">
-        <h2 class="c-second__title">Pefil profecional.</h2>
-        <div class="c-second__content">
+    <section id="c-aboutme">
+      <div class="l-container l-complement c-aboutme">
+        <h2 class="c-aboutme__title">Pefil profecional.</h2>
+        <div class="c-aboutme__content">
           <p>Cuento con una formación básica en las diversas aplicaciones de la microbiología, experiencia en el área clínica, y en investigación y desarrollo orientado al sector biofarmacéutico, en el cual deseo continuar mi crecimiento profesional.</p>
           <p>Mis áreas de interés laboral son el manejo de inmunoensayos, técnicas de biología molecular y el cultivo de células.</p>
         </div>
-        <h2 class="c-second__title">Habilidades.</h2>
-        <ul class="c-second__content c-second__list">
+        <h2 class="c-aboutme__title">Habilidades.</h2>
+        <ul class="c-aboutme__content c-aboutme__list">
           <li>Proactivo y analítico.</li>
           <li>Inglés avanzado.</li>
           <li>Buenas prácticas de laboratorio.</li>
@@ -75,84 +77,84 @@
       </div>
     </section>
     <!-- Experiencia -->
-    <section id="c-third">
-      <div class="l-container l-complement c-third">
-        <h2 class="c-third__title">Experiencia laboral.</h2>
-        <article class="c-third__article">
-          <p class="c-third__article__title">Unidad de Desarrollo e Investigación en Bioprocesos (UDIBI) | 2019 - 2020.</p>
-          <p class="c-third__article__subtitle">Químico analista.</p>
+    <section id="c-experience">
+      <div class="l-container l-complement c-experience">
+        <h2 class="c-experience__title">Experiencia laboral.</h2>
+        <article class="c-experience__article">
+          <p class="c-experience__article__title">Unidad de Desarrollo e Investigación en Bioprocesos (UDIBI) | 2019 - 2020.</p>
+          <p class="c-experience__article__subtitle">Químico analista.</p>
           <p>Actividades:</p>
           <ul>
-            <li class="c-third__article__item">Ejecución de inmunoensayos para la evaluación de sueros; métodos analíticos para la cuantificación de proteínas; y técnicas de biología molecular para la detección de contaminantes en cultivos celulares. </li>
-            <li class="c-third__article__item">Mantenimiento del banco celular de lotes semilla y de trabajo: Descongelación de células, expansión de cultivos y criopreservación.</li>
-            <li class="c-third__article__item">Apertura, seguimiento, verificación y cierre de bitácoras.</li>
-            <li class="c-third__article__item">Preparación y esterilización de medios de cultivo líquidos.</li>
-            <li class="c-third__article__item">Muestreo de agua para la fabricación de inmunomoduladores.</li>
+            <li class="c-experience__article__item">Ejecución de inmunoensayos para la evaluación de sueros; métodos analíticos para la cuantificación de proteínas; y técnicas de biología molecular para la detección de contaminantes en cultivos celulares. </li>
+            <li class="c-experience__article__item">Mantenimiento del banco celular de lotes semilla y de trabajo: Descongelación de células, expansión de cultivos y criopreservación.</li>
+            <li class="c-experience__article__item">Apertura, seguimiento, verificación y cierre de bitácoras.</li>
+            <li class="c-experience__article__item">Preparación y esterilización de medios de cultivo líquidos.</li>
+            <li class="c-experience__article__item">Muestreo de agua para la fabricación de inmunomoduladores.</li>
           </ul>
         </article>
-        <article class="c-third__article">
-          <p class="c-third__article__title">CIMA Laboratorio de análisis clínicos | 2021.</p>
-          <p class="c-third__article__subtitle">Químico analista.</p>
-          <p class="c-third__article__description">Actividades:</p>
-          <ul class="c-third__article__description">
-            <li class="c-third__article__item">Toma y procesamiento de muestras clínicas a pacientes ambulatorios (estudios de rutina).</li>
+        <article class="c-experience__article">
+          <p class="c-experience__article__title">CIMA Laboratorio de análisis clínicos | 2021.</p>
+          <p class="c-experience__article__subtitle">Químico analista.</p>
+          <p class="c-experience__article__description">Actividades:</p>
+          <ul class="c-experience__article__description">
+            <li class="c-experience__article__item">Toma y procesamiento de muestras clínicas a pacientes ambulatorios (estudios de rutina).</li>
           </ul>
         </article>
       </div>
     </section>
     <!-- Conocimientos -->
-    <section id="c-fourth">
-      <div class="l-container l-complement c-fourth">
-        <h2 class="c-fourth__title">Educación.</h2>
-        <div class="c-fourth__container">
-          <article class="c-fourth__content">
+    <section id="c-knowledge">
+      <div class="l-container l-complement c-knowledge">
+        <h2 class="c-knowledge__title">Educación.</h2>
+        <div class="c-knowledge__container">
+          <article class="c-knowledge__content">
             <p>2014 - 2018 | Titulado</p>
-            <h4 class="c-fourth__subtitle">Químico Bacteriólogo Parasitólogo.</h4>
+            <h4 class="c-knowledge__subtitle">Químico Bacteriólogo Parasitólogo.</h4>
             <p>Escuela Nacional de Ciencias Biológicas.</p>
             <p>Instituto Politécnico Nacional.</p>
           </article>
-          <article class="c-fourth__content">
+          <article class="c-knowledge__content">
             <p>2012 | Diploma</p>
-            <h4 class="c-fourth__subtitle">Curso de inglés avanzado.</h4>
+            <h4 class="c-knowledge__subtitle">Curso de inglés avanzado.</h4>
             <p>Escuela de Lenguas Tuxtla.</p>
             <p>Universidad Autónoma de Chiapas.</p>
           </article>
         </div>
-        <h2 class="c-fourth__title">Conocimientos.</h2>
-        <div class="carousel c-fourth__content">
+        <h2 class="c-knowledge__title">Conocimientos.</h2>
+        <div class="carousel c-knowledge__content">
           <div class="window" id="carousel-window">
             <ul class="carousel-container">
               <li class="carousel-item" id="knowledge-1">
-                <div class="knowledge c-fourth__container">
-                  <h3 class="c-fourth__subsubtitle">Capacitaciones y constancias.</h3>
-                  <article class="c-fourth__article">
-                    <p class="c-fourth__paragraph">2018 | Asistencia al curso teórico-práctico “Pippeting Academy” impartido por Sartorius de México, S.A. de C.V.</p>
-                    <p class="c-fourth__paragraph">2019 | Participación en el taller “Análisis e interpretación de la norma ISO 9001:2015” impartido por la Unidad Politécnica para el Desarrollo y la Competitividad Empresarial.</p>
-                    <p class="c-fourth__paragraph">2021 | Presentación del cartel “Desarrollo de anticuerpos dirigidos a los componentes de Transferon oral” en el XXIV Congreso Nacional de Inmunología.</p>
+                <div class="knowledge c-knowledge__container">
+                  <h3 class="c-knowledge__subsubtitle">Capacitaciones y constancias.</h3>
+                  <article class="c-knowledge__article">
+                    <p class="c-knowledge__paragraph">2018 | Asistencia al curso teórico-práctico “Pippeting Academy” impartido por Sartorius de México, S.A. de C.V.</p>
+                    <p class="c-knowledge__paragraph">2019 | Participación en el taller “Análisis e interpretación de la norma ISO 9001:2015” impartido por la Unidad Politécnica para el Desarrollo y la Competitividad Empresarial.</p>
+                    <p class="c-knowledge__paragraph">2021 | Presentación del cartel “Desarrollo de anticuerpos dirigidos a los componentes de Transferon oral” en el XXIV Congreso Nacional de Inmunología.</p>
                   </article>
                 </div>
               </li>
               <li class="carousel-item" id="knowledge-2">
-                <div class="knowledge c-fourth__container">
-                  <h3 class="c-fourth__subsubtitle">Hardwares.</h3>
-                  <article class="c-fourth__article">
+                <div class="knowledge c-knowledge__container">
+                  <h3 class="c-knowledge__subsubtitle">Hardwares.</h3>
+                  <article class="c-knowledge__article">
                     <UL>
-                      <li class="c-fourth__item">Termociclador.</li>
-                      <li class="c-fourth__item">Fotodocumentador.</li>
-                      <li class="c-fourth__item">Espectrofotómetro.</li>
-                      <li class="c-fourth__item">Cabinas de flujo laminar.</li>
-                      <li class="c-fourth__item">Microscopio invertido.</li>
+                      <li class="c-knowledge__item">Termociclador.</li>
+                      <li class="c-knowledge__item">Fotodocumentador.</li>
+                      <li class="c-knowledge__item">Espectrofotómetro.</li>
+                      <li class="c-knowledge__item">Cabinas de flujo laminar.</li>
+                      <li class="c-knowledge__item">Microscopio invertido.</li>
                     </UL>
                   </article>
                 </div>
               </li>
               <li class="carousel-item" id="knowledge-3">
-                <div class="knowledge c-fourth__container">
-                  <h3 class="c-fourth__subsubtitle">Softwares.</h3>
-                  <article class="c-fourth__article">
-                    <li class="c-fourth__item">Herramientas de office (Excel, Word, PowerPoint).</li>
-                    <li class="c-fourth__item">Suite de Google (Gmail, Docs, Hangouts).</li>
-                    <li class="c-fourth__item">GraphPad Prism.</li>
+                <div class="knowledge c-knowledge__container">
+                  <h3 class="c-knowledge__subsubtitle">Softwares.</h3>
+                  <article class="c-knowledge__article">
+                    <li class="c-knowledge__item">Herramientas de office (Excel, Word, PowerPoint).</li>
+                    <li class="c-knowledge__item">Suite de Google (Gmail, Docs, Hangouts).</li>
+                    <li class="c-knowledge__item">GraphPad Prism.</li>
                   </article>
                 </div>
               </li>
@@ -168,15 +170,15 @@
       </div>
     </section>
     <!-- Contacto -->
-    <section id="c-fifth">
-      <div class="l-container l-complement c-fifth">
-        <h2 class="c-fifth__title">Información de contacto.</h2>
+    <section id="c-contact">
+      <div class="l-container l-complement c-contact">
+        <h2 class="c-contact__title">Información de contacto.</h2>
         <div class="form">
-          <form name="contact" method="POST" data-netlify="true">
-            <p><label>Nombre: <input type="text" name="name" /></label></p>
-            <p><label>E-mail: <input type="email" name="email" /></label></p>
-            <p><label>Mensaje: <textarea name="message" cols="30" rows="10"></textarea></label></p>
-            <p><button type="submit">Enviar</button></p>
+          <form class="form-container" name="contact" method="POST" data-netlify="true">
+            <p><label class="form__label">Nombre: <input class="form__input" type="text" name="name" /></label></p>
+            <p><label class="form__label">E-mail: <input class="form__input" type="email" name="email" /></label></p>
+            <p><label>Mensaje: <textarea class="form__input" name="message" cols="30" rows="10"></textarea></label></p>
+            <p class="form__button"><button class="button__simple" type="submit">Enviar</button></p>
           </form>
         </div>
         <div class="information">
@@ -187,7 +189,7 @@
         <div class="documents">
           <h3 class="network-subtitle">Documentos.</h3>
           <div class="documents-container">
-            <a href="./assets/docs/CVJuan.pdf" target="_blank" 
+            <a href="https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing" target="_blank" 
             type="application/octet-stream" download="JuanJLR-CV.pdf"><span class="jam jam-download"></span> Currículum.pdf</a>
           </div>
         </div>
@@ -213,8 +215,8 @@
       <p>copyright Jun 18th 2022 - Juan J. Lázaro Rodríguez </p>
     </div>
   </footer>
-  <!-- <script src="../src/utils/showMenu.js"></script>
+  <script src="../src/utils/showMenu.js"></script>
   <script src="../src/utils/carousel.js"></script>
-  <script src="../src/utils/theme-cubic.js"></script> -->
+  <script src="../src/utils/theme-cubic.js"></script>
 </body>
 </html>

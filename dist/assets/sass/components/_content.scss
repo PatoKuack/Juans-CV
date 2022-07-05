@@ -2,12 +2,8 @@
   --social-media: 2;
 }
 
-
 .main-content > * {
   scroll-margin-top: calc(#{$header-height} - 1px);
-}
-.content-first {
-  scroll-margin-top: calc(#{$header-height} + #{$padding-top-cfirst});
 }
 
 [class*="c-"] > * {
@@ -15,40 +11,51 @@
   margin-right: auto;
   max-width: 600px;
 }
-[class*="c-"]>[class$="__title"]:not(.c-third__article__title) {
-  margin-top: 3rem;
+[class*="c-"]>[class$="__title"]:not(.c-experience__article__title) {
+  margin-top: 2rem;
   text-align: center;
+
+  @include from(m) {
+    margin-top: 3rem;
+  }
 }
 
-.c-first {
-  padding-top: $padding-top-cfirst;
-  padding-bottom: $padding-bottom-cfirst;
+#c-presentation {
+  scroll-margin-top: calc(#{$header-height} + #{$padding-top-cpresentation});
+}
+.c-presentation {
+  // padding-top: $padding-top-cpresentation;
+  // padding-bottom: $padding-bottom-cpresentation;
   margin-top: $header-height;
   text-align: center;
   border-top-style: none;
   position: relative;
+  height: calc(100vh - #{$header-height});
+  &-content {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
   &__image {
     border        : 3px solid var(--border-color);
     border-radius : 50%;
     max-width     : $profil-image-width;
-    margin-bottom : 2rem;
     box-shadow    : 0px calc(#{$profil-image-width}/3.5) 40px -60px var(--text-color);
     z-index: var(--z-normal);
     @include from(m) {
       margin-top    : 1rem;
-      margin-bottom : 3rem;
     }
   }
   &__title {
-    margin-bottom: .2rem;
+    margin-bottom: .3rem;
   }
   &__subtitle {
     font-size: var(--h3-font-size);
+    opacity: 85%;
   }
 }
 
-.c-second {
+.c-aboutme {
 
   &__content {
     margin-top: 1rem;
@@ -61,7 +68,7 @@
   }
 }
 
-.c-third {
+.c-experience {
 
   &__article {
     width: 100%;
@@ -82,7 +89,7 @@
   }
 }
 
-.c-fourth {
+.c-knowledge {
   
   &__article, &__subsubtitle {
     width: fit-content;
@@ -109,7 +116,7 @@
   }
 }
 
-.c-fifth {
+.c-contact {
 
   & > *{
     text-align: center;
