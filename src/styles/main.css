@@ -97,7 +97,7 @@ p, ul {
   flex-direction: column;
   border: 1px solid var(--border-color);
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   padding-left: 2rem;
   padding-right: 2rem; }
   @media screen and (min-width: 768px) {
@@ -485,6 +485,8 @@ p, ul {
   .form__label {
     display: flex;
     justify-content: space-between; }
+  .form__label > * {
+    white-space: nowrap; }
   .form__button {
     text-align: center; }
 

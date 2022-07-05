@@ -31,6 +31,9 @@
     display: flex;
     justify-content: space-between;
   }
+  &__label > * {
+    white-space: nowrap;
+  }
   &__button {
     text-align: center;
   }
