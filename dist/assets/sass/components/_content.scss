@@ -3,7 +3,10 @@
 }
 
 .main-content > * {
-  scroll-margin-top: calc(#{$header-height} - 1px);
+  scroll-margin-top: calc(#{$header-height} + #{$border-width});
+}
+#c-presentation {
+  scroll-margin-top: $header-height;
 }
 
 [class*="c-"] > * {
@@ -20,22 +23,17 @@
   }
 }
 
-#c-presentation {
-  scroll-margin-top: calc(#{$header-height} + #{$padding-top-cpresentation});
-}
 .c-presentation {
-  // padding-top: $padding-top-cpresentation;
-  // padding-bottom: $padding-bottom-cpresentation;
   margin-top: $header-height;
   text-align: center;
   border-top-style: none;
   position: relative;
   height: calc(100vh - #{$header-height});
+
   &-content {
     margin-top: auto;
     margin-bottom: auto;
   }
-
   &__image {
     border        : 3px solid var(--border-color);
     border-radius : 50%;
