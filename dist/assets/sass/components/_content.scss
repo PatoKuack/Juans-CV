@@ -24,11 +24,12 @@
 }
 
 .c-presentation {
+  min-height: 500px;
+  height: calc(100vh - #{$header-height});
+  position: relative;
+  border-top-style: none;
   margin-top: $header-height;
   text-align: center;
-  border-top-style: none;
-  position: relative;
-  height: calc(100vh - #{$header-height});
   
   &-content {
     margin-top: auto;
