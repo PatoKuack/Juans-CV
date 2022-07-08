@@ -20,18 +20,18 @@
   <!-- ------------------- -->
   <!-- estilos -->
   <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
-  <link rel="stylesheet" href="../src/styles/main.css">
+  <!-- <link rel="stylesheet" href="../src/styles/main.css"> -->
   <!-- ------------------- -->
   <title>Juan's CV</title>
 </head>
 <body id="body" class="body">
   <!-- Logo y menú de navegación. -->
-  <header class="main-header">
+  <header class="main-header" id="main-header">
     <div class="l-container main-header__container">
       <div class="main-menu-toggle" id="main-menu-toggle">
         <div class="main-menu-toggle__line"></div>
       </div>
-      <a href="#c-presentation" class="main-brand" title="Ir al principio">
+      <a href="#c-presentation" id="main-brand" class="main-brand" title="Ir al principio">
         <span class="jam jam-flask main-brand_brand"></span>
       </a>
       <nav class="main-nav" id="main-nav">
@@ -50,8 +50,8 @@
     <section id="c-presentation">
       <div class="l-container l-complement c-presentation">
         <div class="c-presentation-content">
-          <!-- <img class="c-presentation__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
-          <img class="c-presentation__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil">
+          <img class="c-presentation__image" src="./assets/images/profilePicture.jpg" alt="Foto de perfil">
+          <!-- <img class="c-presentation__image" src="../src/assets/images/profilePicture.jpg" alt="Foto de perfil"> -->
           <!-- Título -->
           <h1 class="c-presentation__title">Juan José Lázaro Rodríguez</h1>
           <!-- Subtitle -->
@@ -62,18 +62,29 @@
     <!-- Sobre mí -->
     <section id="c-aboutme">
       <div class="l-container l-complement c-aboutme">
-        <h2 class="c-aboutme__title">Pefil profecional.</h2>
-        <div class="c-aboutme__content">
-          <p>Cuento con una formación básica en las diversas aplicaciones de la microbiología, experiencia en el área clínica, y en investigación y desarrollo orientado al sector biofarmacéutico, en el cual deseo continuar mi crecimiento profesional.</p>
-          <p>Mis áreas de interés laboral son el manejo de inmunoensayos, técnicas de biología molecular y el cultivo de células.</p>
+        <div class="c-aboutme-container">
+          <h2 class="c-aboutme__title">Pefil profecional.</h2>
+          <div class="c-aboutme__content">
+            <p>Cuento con una formación básica en las diversas aplicaciones de la microbiología, experiencia en el área clínica, y en investigación y desarrollo orientado al sector biofarmacéutico, en el cual deseo continuar mi crecimiento profesional.</p>
+            <p>Mis áreas de interés laboral son el manejo de inmunoensayos, técnicas de biología molecular y el cultivo de células.</p>
+            <p class="c-aboutme__button">
+              <button class="button button__simple" type="button">
+                <a href="https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing" target="_blank">
+                  <span class="jam jam-download"></span> Currículum.pdf
+                </a>
+              </button>
+            </p>
+          </div>
         </div>
-        <h2 class="c-aboutme__title">Habilidades.</h2>
-        <ul class="c-aboutme__content c-aboutme__list">
-          <li>Proactivo y analítico.</li>
-          <li>Inglés avanzado.</li>
-          <li>Buenas prácticas de laboratorio.</li>
-          <li>Buenas prácticas de documentación.</li>
-        </ul>
+        <div class="c-aboutme-container">
+          <h2 class="c-aboutme__title">Habilidades.</h2>
+          <ul class="c-aboutme__content c-aboutme__list">
+            <li>Proactivo y analítico.</li>
+            <li>Inglés avanzado.</li>
+            <li>Buenas prácticas de laboratorio.</li>
+            <li>Buenas prácticas de documentación.</li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- Experiencia -->
@@ -178,45 +189,49 @@
             <p><label class="form__label">Nombre: <input class="form__input" type="text" name="name" /></label></p>
             <p><label class="form__label"><span>E-mail: </span><input class="form__input" type="email" name="email" /></label></p>
             <p><label>Mensaje: <textarea class="form__input" name="message" cols="30" rows="10"></textarea></label></p>
-            <p class="form__button"><button class="button__simple" type="submit">Enviar</button></p>
+            <p class="form__button"><button class="button button__simple" type="submit"><span>Enviar</span></button></p>
           </form>
         </div>
-        <div class="information">
-          <p class="information-description"><span class="jam jam-inbox"></span> Juancho@cacahuate.com</p>
-          <p class="information-description"><span class="jam jam-world"></span> Calle Siempre viva no. 742, Springfield</p>
-          <p class="information-description"><span class="jam jam-paper-plane"></span> +52 55-01-800-kuack</p>
-        </div>
-        <div class="documents">
+        <!-- <div class="documents">
           <h3 class="network-subtitle">Documentos.</h3>
           <div class="documents-container">
             <a href="https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing" target="_blank" 
             type="application/octet-stream" download="JuanJLR-CV.pdf"><span class="jam jam-download"></span> Currículum.pdf</a>
           </div>
-        </div>
-        <div class="network">
-          <h3 class="network-subtitle">Redes sociales.</h3>
-          <div class="network-container">
-            <a class="network-brand" target="_blank" href="https://www.facebook.com/juan.j.lazaro.9">
-              <span class="jam jam-facebook brand" alt="icono de Facebook"></span>
-              <p class="network__description">Facebook</p>
-            </a>
-            <a class="network-brand" target="_blank" href="https://www.linkedin.com/in/juan-j-l%C3%A1zaro-rodr%C3%ADguez-943881198/">
-              <span class="jam jam-linkedin brand" alt="icono de Linkedin"></span>
-              <p class="network__description">Linkedin</p>
-            </a>
+        </div> -->
+        <div class="c-contact-container">
+          <div class="information">
+            <p class="information__description"><span class="jam jam-world"></span> Ciudad de México - México</p>
+            <p class="information__description"><span class="jam jam-inbox"></span> juan_jlr@hotmail.com</p>
+            <p class="information__description"><span class="jam jam-paper-plane"></span> 55 6072 6447</p>
+          </div>
+        <!-- </div>
+        <div class="c-contact-container"> -->
+          <div class="network">
+            <h3 class="network__subtitle">Redes sociales.</h3>
+            <div class="network__content">
+              <a class="network__brand" target="_blank" href="https://www.facebook.com/juan.j.lazaro.9">
+                <span class="jam jam-facebook brand" alt="icono de Facebook"></span>
+                <p class="network__description">Facebook</p>
+              </a>
+              <a class="network__brand" target="_blank" href="https://www.linkedin.com/in/juan-j-l%C3%A1zaro-rodr%C3%ADguez-943881198/">
+                <span class="jam jam-linkedin brand" alt="icono de Linkedin"></span>
+                <p class="network__description">Linkedin</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
   <!-- Footer -->
-  <footer class="main-footer">
+  <footer class="main-footer" id="main-footer">
     <div class="l-container main-footer__container">
       <p>copyright Jun 18th 2022 - Juan J. Lázaro Rodríguez </p>
     </div>
   </footer>
-  <script src="../src/utils/showMenu.js"></script>
+  <!-- <script src="../src/utils/showMenu.js"></script>
   <script src="../src/utils/carousel.js"></script>
-  <script src="../src/utils/theme-cubic.js"></script>
+  <script src="../src/utils/theme-cubic.js"></script> -->
 </body>
 </html>

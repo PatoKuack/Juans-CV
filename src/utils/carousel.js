@@ -20,14 +20,14 @@ window.addEventListener('load', () => {
     document.querySelector(selectorName).addEventListener('touchstart', e => {
       Xstart = e.changedTouches[0].screenX;
       Ystart = e.changedTouches[0].screenY;
-      console.log("Xstart = %d", Xstart);
-      console.log("Ystart = %d", Ystart);
+      // console.log("Xstart = %d", Xstart);
+      // console.log("Ystart = %d", Ystart);
     });
     document.querySelector(selectorName).addEventListener('touchend', e => {      
       Xend = e.changedTouches[0].screenX;
       Yend = e.changedTouches[0].screenY;
-      console.log("Xend = %d", Xend);
-      console.log("Yend = %d", Yend);
+      // console.log("Xend = %d", Xend);
+      // console.log("Yend = %d", Yend);
       operations();
     });
 
@@ -54,7 +54,7 @@ let difYtouch = 0;
 let displacement = "";
 function operations() {
   difYtouch = Math.sqrt((Ystart - Yend)**2);
-  console.log(difYtouch);
+  // console.log(difYtouch);
   if(((Xstart - Xend) >= 30) && (difYtouch < 50)) {
     displacement = "right";
     clickRight();
@@ -62,7 +62,7 @@ function operations() {
     displacement = "left";
     clickLeft();
   }else { displacement = "central" }
-  console.log(displacement);
+  // console.log(displacement);
 }
 
 

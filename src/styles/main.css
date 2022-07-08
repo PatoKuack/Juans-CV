@@ -92,14 +92,10 @@ p, ul {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-color);
-  padding-top: 2rem;
-  padding-bottom: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
   padding-left: 2rem;
   padding-right: 2rem; }
-  @media screen and (min-width: 768px) {
-    .l-complement {
-      padding-top: 3rem;
-      padding-bottom: 8rem; } }
 
 [class^="decoration__"] {
   position: absolute;
@@ -270,7 +266,7 @@ p, ul {
   --social-media: 2; }
 
 .main-content > * {
-  scroll-margin-top: calc(var(--header-height) + 1px); }
+  scroll-margin-top: calc(var(--header-height) - 1px); }
 
 #c-presentation {
   scroll-margin-top: var(--header-height); }
@@ -317,8 +313,24 @@ p, ul {
 .c-aboutme__content > * {
   text-align: center; }
 
+.c-aboutme__list {
+  width: fit-content; }
+
 .c-aboutme__list > * {
   text-align: left; }
+
+.c-aboutme__button {
+  margin: 1rem; }
+
+@media screen and (min-width: 1280px) {
+  .c-aboutme {
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .c-aboutme__content {
+      max-width: 450px; }
+    .c-aboutme-container {
+      margin-left: 0;
+      margin-right: 0; } }
 
 .c-experience__article {
   width: 100%;
@@ -360,39 +372,72 @@ p, ul {
 .c-knowledge__paragraph {
   padding: .5rem 0; }
 
-.c-contact > * {
-  text-align: center; }
+.c-contact {
+  padding-bottom: 6rem; }
+  .c-contact > * {
+    text-align: center; }
+  @media screen and (min-width: 1280px) {
+    .c-contact-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 1200px;
+      margin: 5rem 5rem 2rem 5rem; } }
+
+.information, .network {
+  margin-top: 3rem; }
+  @media screen and (min-width: 1280px) {
+    .information, .network {
+      margin: 0; } }
 
 .information {
-  margin-top: 1rem; }
-
-.documents {
-  margin-top: 3rem; }
-  .documents-container {
-    display: flex; }
-  .documents-container > * {
-    margin: 1rem; }
-    @media screen and (min-width: 768px) {
-      .documents-container > * {
-        margin: 1rem 2rem; } }
+  padding: 1rem 2rem;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color-containerA);
+  z-index: var(--z-normal); }
+  @media screen and (min-width: 1280px) {
+    .information {
+      height: fit-content; } }
 
 .network {
-  margin-top: 3rem; }
-  .network-container {
+  width: fit-content; }
+  .network__subtitle {
+    margin-bottom: .5rem; }
+  .network__content {
     display: flex;
     flex-direction: row; }
-  .network-brand {
+  .network__brand {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(var(--social-media), 1fr);
     margin: 1rem;
     width: 50px; }
-    @media screen and (min-width: 768px) {
-      .network-brand {
-        margin: 1rem 2rem; } }
   .network__description {
     font-size: var(--small-font-size); }
+  @media screen and (min-width: 768px) {
+    .network__brand {
+      margin: 1rem 2rem; } }
+  @media screen and (min-width: 1280px) {
+    .network {
+      margin: 0; }
+      .network__brand {
+        margin: 1rem 1.5rem; } }
 
+/* .documents {
+  margin-top: 3rem;
+
+  &-container {
+    display: flex;
+  }
+  &-container > * {
+    margin: 1rem;
+    @include from(m) {
+      margin: 1rem 2rem;
+    }
+  }
+} */
 :root {
   --separate-window: 1rem;
   --arrow-size: 75px;
@@ -456,16 +501,14 @@ p, ul {
     right: calc((var(--arrow-size) - (var(--arrow-size) * 2)) / 1.5); }
 
 .form {
-  border: 1px solid var(--border-color);
   margin-top: 2rem;
   padding: 2rem;
-  max-width: 400px; }
+  border: 1px solid var(--border-color); }
   @media screen and (min-width: 768px) {
     .form {
       padding: 2rem 4rem;
-      width: 450px; } }
+      width: 500px; } }
   .form-container {
-    width: fit-content;
     text-align: left; }
   .form-container > * {
     margin-top: .5rem; }
@@ -499,3 +542,10 @@ p, ul {
     .main-footer__container {
       padding-top: 2rem;
       padding-bottom: 2rem; } }
+
+.button {
+  cursor: pointer; }
+  .button > * {
+    display: block;
+    padding: .3rem .5rem;
+    color: black; }

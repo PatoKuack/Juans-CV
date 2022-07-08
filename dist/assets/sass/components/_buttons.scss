@@ -1,0 +1,9 @@
+.button {
+  cursor: pointer;
+  & > * {
+    display: block;
+    padding: .3rem .5rem;
+    color: black;
+    
+  }
+}

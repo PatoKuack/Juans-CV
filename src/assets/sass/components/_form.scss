@@ -1,16 +1,14 @@
 .form {
-  border: $border-width solid var(--border-color);
   margin-top: 2rem;
   padding: 2rem;
-  max-width: 400px;
+  border: $border-width solid var(--border-color);
   
   @include from(m) {
     padding: 2rem 4rem;
-    width: 450px;
+    width: 500px;
   }
 
   &-container {
-    width: fit-content;
     text-align: left;
   }
   &-container > * {

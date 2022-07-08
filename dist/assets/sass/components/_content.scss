@@ -3,7 +3,7 @@
 }
 
 .main-content > * {
-  scroll-margin-top: calc(#{$header-height} + #{$border-width});
+  scroll-margin-top: calc(#{$header-height} - #{$border-width});
 }
 #c-presentation {
   scroll-margin-top: $header-height;
@@ -29,7 +29,7 @@
   border-top-style: none;
   position: relative;
   height: calc(100vh - #{$header-height});
-
+  
   &-content {
     margin-top: auto;
     margin-bottom: auto;
@@ -61,8 +61,27 @@
   &__content > * {
     text-align: center;
   }
+  &__list {
+    width: fit-content;
+  }
   &__list > * {
     text-align: left;
+  }
+  &__button {
+    margin: 1rem;
+  }
+
+  @include from(l) {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    &__content {
+      max-width: 450px;
+    }
+    &-container {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
 
@@ -115,16 +134,76 @@
 }
 
 .c-contact {
-
+  padding-bottom: 6rem;
+  
   & > *{
     text-align: center;
   }
+
+  @include from(l) {
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: $max-width;
+      margin: 5rem 5rem 2rem 5rem;
+    }
+  }
 }
 
-.information {
-  margin-top: 1rem;
+.information, .network {
+  margin-top: 3rem;
+  @include from(l) {
+    margin: 0;
+  }
 }
-.documents {
+.information {
+  padding: 1rem 2rem;
+  text-align: left;
+  border: $border-width solid var(--border-color);
+  background-color: var(--bg-color-containerA);
+  z-index: var(--z-normal);
+
+  @include from(l) {
+    height: fit-content;
+  }
+}
+
+.network {
+  width: fit-content;
+
+  &__subtitle {
+    margin-bottom: .5rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+  &__brand {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--social-media), 1fr);
+    margin: 1rem;
+    width: 50px;
+  }
+  &__description {
+    font-size: var(--small-font-size);
+  }
+
+  @include from(m) {
+    &__brand {
+      margin: 1rem 2rem;
+    } 
+  }
+  @include from(l) {
+    margin: 0;
+    &__brand {
+      margin: 1rem 1.5rem;
+    } 
+  }
+}
+/* .documents {
   margin-top: 3rem;
 
   &-container {
@@ -136,26 +215,4 @@
       margin: 1rem 2rem;
     }
   }
-}
-.network {
-  margin-top: 3rem;
-  
-  &-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &-brand {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(var(--social-media), 1fr);
-    margin: 1rem;
-    width: 50px;
-    @include from(m) {
-      margin: 1rem 2rem;
-    }
-  }
-  &__description {
-    font-size: var(--small-font-size);
-  }
-}
+} */
