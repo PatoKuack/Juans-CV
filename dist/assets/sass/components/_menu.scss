@@ -33,7 +33,7 @@
   border: $border-width solid var(--border-color);
   border-top-color: var(--bg-color-containerA);
   border-bottom-style: none;
-  padding-top: 1rem;
+  padding-top: var(--header-height);
   transition: left .3s;
   z-index: var(--z-fixed);
   -webkit-backdrop-filter: blur(2px);
@@ -98,6 +98,94 @@
   &::after {
     bottom: 0%;
   }
+
+/* ---------Animación del TOGGLE---------- */
+transition: transform .5s;
+&::before, &::after {
+  transition: width .5s, height .5s, left .5s, transform .5s, background-color .5s;
+}
+&__line {
+  transition: transform .5s;
+}
+
+&.active::before, &.active::after{
+  width: 80%;
+  height: 100%;
+}
+&.active::before {
+  left: 25%;
+  transform: rotate(45deg) scale(70%);
+}
+&.active &__line {
+  transform: scale(1%);
+}
+&.active::after {
+  background-color: var(--bg-color-containerA);
+  left: 50%;
+  transform: rotate(45deg) scale(70%);
+}
+
+/* 
+&::before{
+  transition: transform .5s 0s, top .5s 0s;
+}
+&.active &-lines{
+  transition: width .5s, left .5s;
+}
+&::after{
+  transition: transform .5s .5s, bottom .5s .5s;
+}
+
+***********************
+&::before, &::after{
+  width: 80%;
+  height: 100%;
+  position: absolute;
+}
+
+&::before {
+  background-color: var(--text-color);
+  left: 50%;
+  transform: rotate(45deg) scale(70%);
+}
+// &__line {}
+&::after {
+  background-color: var(--bg-color-containerA);
+  left: 75%;
+  transform: rotate(45deg) scale(70%);
+}
+***********************
+
+
+
+&.active{
+  transform: rotate(-90deg);
+}
+&.active::before{
+  top: 100%;
+  transform: translateY(-250%) rotate(45deg);
+}
+&-lines{
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  transition: width .5s .5s, left .5s .5s;
+}
+&.active &-lines{
+  width: 20%;
+  left: 40%;
+}
+&::after{
+  bottom: 0%;
+  transition: transform .5s .5s, bottom .5s .5s;
+}
+&.active::after{
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+ */
+/* ------------------------------------------ */
+
 
   @include from(m) {
     display: none;

@@ -1,0 +1,7 @@
+.icon {
+  width: .9rem;
+  
+  @include from(m) {
+    width: 1rem;
+  }
+}

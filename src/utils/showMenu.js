@@ -7,31 +7,34 @@ window.addEventListener('load', () => {
   
   if( toggleId && navId && brandID && mainId && footerId ) {
     // Si se da clic en el botón hamburguesa se le colocará al menú la clase 'show'.
-    toggleId.addEventListener('touchend', () => {
+    toggleId.addEventListener('click', () => {
       navId.classList.toggle('show');
-      // toggleId.classList.toggle('active');
+      toggleId.classList.toggle('active');
     });
     // Si se da clic fuera del menú, se eliminará la clase 'show'.
     brandID.addEventListener('touchstart', () => {
-      removeShowActive(navId);
+      removeShowActive(navId, toggleId);
     });
     mainId.addEventListener('touchstart', () => {
-      removeShowActive(navId);
+      removeShowActive(navId, toggleId);
     });
     footerId.addEventListener('touchstart', () => {
-      removeShowActive(navId);
+      removeShowActive(navId, toggleId);
     });
   }
 });
 
   
-const removeShowActive = (navigator) => {
-  let className1 = navigator.classList[1];
-  let classNumber1 = navigator.classList.length;
-  if(classNumber1==2 && className1=="show"){
+const removeShowActive = (navigator, toggle) => {
+  let classNumber = navigator.classList.length;
+  if(classNumber==2){
+    let className = navigator.classList[1];
+    if(className=="show"){
       navigator.classList.remove('show');
-      // toggle.classList.remove('active');
+      toggle.classList.remove('active');
+    }
   }
+
 }
 
 

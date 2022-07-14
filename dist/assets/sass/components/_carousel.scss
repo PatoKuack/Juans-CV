@@ -27,6 +27,7 @@
 }
 
 .window {
+  position: relative;
   overflow: hidden;
   padding: var(--separate-window) 0;
   width: var(--width-window);
@@ -87,7 +88,33 @@
   &-right {
     right: calc((var(--arrow-size) - (var(--arrow-size) * 2)) / 1.5);
   }
-  
+}
+
+.interactive-hand {
+  display: block;
+  position: absolute;
+  left: calc(50% - 40px);
+  top: 25%;
+  width: 80px;
+  z-index: var(--z-normal);
+  opacity: 0%;
+  pointer-events: none;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  @include from(m) {
+    display: none;
+  }
+}
+@keyframes movingHand {
+  0%, 50%, 100%{
+    transform: translateX(-50%) rotate(0);
+  }
+  25%, 75%{
+    transform: translateX(50%) rotate(.3turn);
+  }
+  10%,90% {
+    opacity: 100%;
+  }
 }
 
 

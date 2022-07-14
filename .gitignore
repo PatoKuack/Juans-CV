@@ -1,7 +1,7 @@
 *.key
 *.docx
 *.pdf
-!CVJuan.php
+!CVJuan.pdf
 
 *.jpg
 !profilePicture.jpg
@@ -16,3 +16,4 @@
 
 .env
 /Documents
+./src/assets/icons

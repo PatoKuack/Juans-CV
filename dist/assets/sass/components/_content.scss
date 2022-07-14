@@ -23,6 +23,11 @@
   }
 }
 
+.c-presentation-content, .c-aboutme-container, .c-experience__article, .c-knowledge-container, .form, .information, .network {
+  z-index: var(--z-normal);
+}
+
+
 .c-presentation {
   min-height: 500px;
   height: calc(100vh - #{$header-height});
@@ -40,7 +45,7 @@
     border-radius : 50%;
     max-width     : $profil-image-width;
     box-shadow    : 0px calc(#{$profil-image-width}/3.5) 40px -60px var(--text-color);
-    z-index: var(--z-normal);
+    // z-index: var(--z-normal);
     @include from(m) {
       margin-top    : 1rem;
     }
@@ -55,7 +60,7 @@
 }
 
 .c-aboutme {
-
+  
   &__content {
     margin-top: 1rem;
   }
@@ -112,9 +117,11 @@
   &__article, &__subsubtitle {
     width: fit-content;
   }
-  &__content {
+  &-container {
     margin-top: .5rem;
-    z-index: var(--z-normal);
+  }
+  &__content {
+    margin-top: 1rem;
   }
   &__subtitle {
     margin: .15rem 0;
@@ -164,7 +171,15 @@
   text-align: left;
   border: $border-width solid var(--border-color);
   background-color: var(--bg-color-containerA);
-  z-index: var(--z-normal);
+
+  
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+  &__description .icon {
+    margin-right: .5rem;
+  }
 
   @include from(l) {
     height: fit-content;

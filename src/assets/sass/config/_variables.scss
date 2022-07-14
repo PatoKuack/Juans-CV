@@ -17,7 +17,7 @@ $breackpoints: (
   --bg-color-containerA   : #565757;
   --bg-color-containerB   : #9aafb4;
   --bg-color-containerC   : #676868;
-  --bg-color-hover        : #f0f8ff;
+  --bg-color-hover        : #869ba0;
 
   // --text-color          : #333434;
   // --border-color        : #053544;
@@ -70,7 +70,7 @@ $breackpoints: (
   --header-height               : 3rem;
   --profil-image-width          : 12rem;
   @media screen and (min-width: map_get($breackpoints, m)){
-    --header-height               : 4rem;
+    --header-height               : 3.5rem;
     --profil-image-width          : 14rem;
   }
 }

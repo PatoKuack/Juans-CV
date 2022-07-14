@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
     // console.log(e.changedTouches);
     // console.log(e.changedTouches[0]);
     // console.log(e.changedTouches[0].target.className);
-    //donde se posiciona el touch en la pantalla
+    // Donde se posiciona el touch en la pantalla
     // console.log(e.changedTouches[0].clientX);
     // console.log(e.changedTouches[0].pageX);
     // console.log(e.changedTouches[0].screenX);

@@ -40,4 +40,8 @@
       margin-right: $toggle-width;
     }
   }
+  & > * {
+    // max-height: $toggle-width;
+    height: 100%;
+  }
 }
