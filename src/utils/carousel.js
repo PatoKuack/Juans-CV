@@ -70,26 +70,35 @@ function operations() {
 function clickLeft() {
   let widthWindow = parseInt(getComputedStyle(document.getElementById('carousel-window')).width, 10); // Obtiene el valor numerico del width del elemento con el id carousel-window.
   /* Se obtiene el valor de left y se convierte a base decimal (10), o sea se obtiene "0" y se entrega 0 */
-  const currentLeft = parseInt(
+  let currentLeft = parseInt(
     getComputedStyle(document.querySelector(".carousel-container")).left,
     10
   );
   if (currentLeft === 0) { // Si el valor de izquiera es 0, retornar para no seguir movierno el contenido
     return;
-  }
-  let newValue = currentLeft + widthWindow;
-  document.querySelector(".carousel-container").style.left = `${newValue}px`;
-  switch (newValue) {
-    case -widthWindow:
-      document.getElementById('knowledge-3').setAttribute("tabindex", "-1");
-      document.getElementById('knowledge-2').removeAttribute("tabindex");
-      break;
-    case 0:
-      document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
-      document.getElementById('knowledge-1').removeAttribute("tabindex");
-      break;
-    default:
-      break;
+  } else {
+    let newValue = currentLeft + widthWindow;
+    document.querySelector(".carousel-container").style.left = `${newValue}px`;
+    switch (newValue) {
+      case -widthWindow:
+        document.getElementById('knowledge-3').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-2').removeAttribute("tabindex");
+        break;
+      case 0:
+        document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-1').removeAttribute("tabindex");
+        break;
+      default:
+        break;
+    }
+    const interPaper = document.getElementById('interactivePaper');
+    // interPaper.style.animationName = "movingPaper";
+    interPaper.style.display = "block";
+    interPaper.style.animationDirection = "reverse";
+    interPaper.addEventListener('animationend', () => {
+      // interPaper.style.animationName = "";
+      interPaper.style.display = "none";
+    });
   }
 }
 
@@ -98,25 +107,34 @@ function clickLeft() {
 function clickRight() {
   let widthWindow = parseInt(getComputedStyle(document.getElementById('carousel-window')).width, 10); // Obtiene el valor numerico del width del elemento con el id carousel-window.
   /* Se obtiene el valor de left y se convierte a base decimal (10), o sea se obtiene "0" y se entrega 0 */
-  const currentRight = parseInt(
+  let currentRight = parseInt(
     getComputedStyle(document.querySelector(".carousel-container")).left,
     10
   );
-  if (currentRight < -widthWindow) { // Si el valor de izquierda es menor a -540, retorna para de mover el contenido.
+  if (currentRight < -widthWindow) { // Si el valor de izquierda es menor a -540, retorna para dejar de mover el contenido.
     return;
-  }
-  let newValue = currentRight - widthWindow;
-  document.querySelector(".carousel-container").style.left = `${newValue}px`;
-  switch (newValue) {
-    case -widthWindow:
-      document.getElementById('knowledge-1').setAttribute("tabindex", "-1");
-      document.getElementById('knowledge-2').removeAttribute("tabindex");
-      break;
-    case -(widthWindow * 2):
-      document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
-      document.getElementById('knowledge-3').removeAttribute("tabindex");
-      break;
-    default:
-      break;
+  } else {
+    let newValue = currentRight - widthWindow;
+    document.querySelector(".carousel-container").style.left = `${newValue}px`;
+    switch (newValue) {
+      case -widthWindow:
+        document.getElementById('knowledge-1').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-2').removeAttribute("tabindex");
+        break;
+      case -(widthWindow * 2):
+        document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-3').removeAttribute("tabindex");
+        break;
+      default:
+        break;
+    }
+    const interPaper = document.getElementById('interactivePaper');
+    // interPaper.style.animationName = "movingPaper";
+    interPaper.style.display = "block";
+    interPaper.style.animationDirection = "normal";
+    interPaper.addEventListener('animationend', () => {
+      // interPaper.style.animationName = "";
+      interPaper.style.display = "none";
+    });
   }
 }

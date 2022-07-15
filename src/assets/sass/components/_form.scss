@@ -21,6 +21,9 @@
     padding: .1rem .3rem;
     border-color: var(--border-color);
     text-align: left;
+    border-width: .1rem;
+    border-style: double;
+    border-color: var(--bg-color-hover) var(--bg-color-hover) var(--border-color) var(--border-color);
   }
   &__input:not(textarea) {
     margin-left: .5rem;
