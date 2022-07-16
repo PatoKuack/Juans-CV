@@ -1,6 +1,6 @@
 const button = document.querySelectorAll('.button__simple');
 const buttonContent = document.querySelectorAll('.button__simple > *');
-const buttonCV = document.getElementById('butom-cv')
+const buttonCV = document.getElementById('button-cv')
 
 button.forEach( e => {
   const styleButton = window.getComputedStyle(e, null);
@@ -21,14 +21,13 @@ button.forEach( e => {
   });
 });
 
-function openCV() {
-  setTimeout( function() {
-    window.open("https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing", "_blank");
-  }, 250);
-}
-// buttonCV.addEventListener('click', () => {
+// function openCV() { //DO NOT WORK =C
 //   setTimeout( function() {
 //     window.open("https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing", "_blank");
 //   }, 250);
-// });
-
+// }
+buttonCV.addEventListener('click', () => {
+  setTimeout( function() {
+    window.open("https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing", "_blank");
+  }, 250);
+});
