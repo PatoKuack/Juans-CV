@@ -1,5 +1,6 @@
-const button = document.querySelectorAll(".button__simple");
-const buttonContent = document.querySelectorAll(".button__simple > *");
+const button = document.querySelectorAll('.button__simple');
+const buttonContent = document.querySelectorAll('.button__simple > *');
+const buttonCV = document.getElementById('butom-cv')
 
 button.forEach( e => {
   const styleButton = window.getComputedStyle(e, null);
@@ -20,15 +21,14 @@ button.forEach( e => {
   });
 });
 
-// function buttonDown() {
-//   button.style.borderColor = "rgb(86, 87, 87) rgb(86, 87, 87) rgb(163, 169, 172) rgb(163, 169, 172)";
-//   // buttonContent.style.padding = ".4rem .5rem .2rem .5rem";
-// }
-// button.addEventListener('mouseup', () => {
-//   setTimeout(function() {
-//     button.style.borderColor = `${valueStyleBBC}`;
-//     // buttonContent.style.padding = `${valueStyleBCP}`;
+function openCV() {
+  setTimeout( function() {
+    window.open("https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing", "_blank");
+  }, 250);
+}
+// buttonCV.addEventListener('click', () => {
+//   setTimeout( function() {
+//     window.open("https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing", "_blank");
 //   }, 250);
 // });
-
 

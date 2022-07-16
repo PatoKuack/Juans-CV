@@ -40,13 +40,9 @@
   border: $border-width solid var(--border-color);
   display: inline-block;
   min-height: 100%;
-  // margin: 0 calc(var(--separate-window)/2);
-  // padding: var(--separate-window);
   padding: calc(var(--separate-window) / 2) calc(var(--separate-window) * 1.5);
   padding-bottom: calc(var(--separate-window) * 3);
   object-fit: cover;
-  // transition: transform 0.2s ease-in-out;
-  // width: calc(var(--width-window) - var(--separate-window));
   width: var(--width-window);
   background-image: linear-gradient(50deg, var(--bg-color-containerA) 50%, var(--bg-color-containerB) 100%);
   
@@ -54,11 +50,6 @@
     padding: var(--separate-window) calc(var(--separate-window) * 4);
     min-height: 500px;
   }
-
-  // &:hover {
-  //   cursor: pointer;
-  //   transform: scale(1.1);
-  // }
 }
 
 
@@ -92,6 +83,9 @@
   }
 }
 
+.carousel-hand {
+  display: none;
+}
 .interactive-hand {
   display: block;
   position: absolute;
@@ -101,6 +95,7 @@
   z-index: var(--z-normal);
   opacity: 0%;
   pointer-events: none;
+  animation-name: movingHand;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   @include from(m) {
@@ -142,13 +137,12 @@
   animation-duration: .5s;
   animation-timing-function: ease-in;
   animation-direction: normal;
-  // -o-animation-direction: normal;
-  // -moz-animation-direction: normal;
-  // -webkit-animation-direction: normal;
   animation-fill-mode: forwards;
   transform-origin: left center;
+  perspective: 1000px;
   perspective-origin: right top;
   backface-visibility: visible;
+  will-change: transform;
 
   @include from(m) {
     width: 80%;
@@ -162,7 +156,6 @@
   right: calc(-#{$border-width} - var(--fold-height));
   top: calc(-#{$border-width} - var(--fold-height));
   background-image: linear-gradient(340deg, var(--bg-color-containerA) 90%, transparent 95%);
-  will-change: transform;
 
   &-circle {
     position: absolute;
@@ -184,18 +177,18 @@
 
 @keyframes movingPaper {
   0% {
-    transform: rotate3d(0, 1, 0, 0deg);
-    -o-transform: rotate3d(0, 1, 0, 0deg);
-    -ms-transform: rotate3d(0, 1, 0, 0deg);
-    -moz-transform: rotate3d(0, 1, 0, 0deg);
-    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+    -o-transform: rotate3d(0, 0, 0, 0deg);
+    -ms-transform: rotate3d(0, 0, 0, 0deg);
+    -moz-transform: rotate3d(0, 0, 0, 0deg);
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
   }
   100% {
-    transform: rotate3d(0, 1, 0, 90deg);
-    -o-transform: rotate3d(0, 1, 0, 90deg);
-    -ms-transform: rotate3d(0, 1, 0, 90deg);
-    -moz-transform: rotate3d(0, 1, 0, 90deg);
-    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+    transform: rotate3d(0, 1, -0.1, 90deg);
+    -o-transform: rotate3d(0, 1, -0.1, 90deg);
+    -ms-transform: rotate3d(0, 1, -0.1, 90deg);
+    -moz-transform: rotate3d(0, 1, -0.1, 90deg);
+    -webkit-transform: rotate3d(0, 1, -0.1, 90deg);
   }
 }
 

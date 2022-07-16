@@ -15,35 +15,40 @@ window.addEventListener('load', () => {
     }
   });
   
-    
-    // const getSelector = document.querySelector(selectorName);
-    document.querySelector(selectorName).addEventListener('touchstart', e => {
-      Xstart = e.changedTouches[0].screenX;
-      Ystart = e.changedTouches[0].screenY;
-      // console.log("Xstart = %d", Xstart);
-      // console.log("Ystart = %d", Ystart);
-    });
-    document.querySelector(selectorName).addEventListener('touchend', e => {      
-      Xend = e.changedTouches[0].screenX;
-      Yend = e.changedTouches[0].screenY;
-      // console.log("Xend = %d", Xend);
-      // console.log("Yend = %d", Yend);
-      operations();
-    });
+  // const getSelector = document.querySelector(selectorName);
+  document.querySelector(selectorName).addEventListener('touchstart', e => {
+    Xstart = e.changedTouches[0].screenX;
+    Ystart = e.changedTouches[0].screenY;
+    // console.log("Xstart = %d", Xstart);
+    // console.log("Ystart = %d", Ystart);
+  });
+  document.querySelector(selectorName).addEventListener('touchend', e => {      
+    Xend = e.changedTouches[0].screenX;
+    Yend = e.changedTouches[0].screenY;
+    // console.log("Xend = %d", Xend);
+    // console.log("Yend = %d", Yend);
+    touchMove();
+  });
+  // e.forEach(touch => {
+  // console.log(e);
+  // console.log(e.changedTouches);
+  // console.log(e.changedTouches[0]);
+  // console.log(e.changedTouches[0].target.className);
+  // Donde se posiciona el touch en la pantalla
+  // console.log(e.changedTouches[0].clientX);
+  // console.log(e.changedTouches[0].pageX);
+  // console.log(e.changedTouches[0].screenX);
+  // Ni idea
+  // console.log(e.changedTouches[0].radiusX);
+  // });
 
-    // e.forEach(touch => {
-    // console.log(e);
-    // console.log(e.changedTouches);
-    // console.log(e.changedTouches[0]);
-    // console.log(e.changedTouches[0].target.className);
-    // Donde se posiciona el touch en la pantalla
-    // console.log(e.changedTouches[0].clientX);
-    // console.log(e.changedTouches[0].pageX);
-    // console.log(e.changedTouches[0].screenX);
-    // Ni idea
-    // console.log(e.changedTouches[0].radiusX);
-    // });
 });
+
+const pageKnowledge = document.getElementById('page-number');
+const allPages = document.querySelectorAll('.carousel-item');
+let totalPages = allPages.length;
+var pageN = 1;
+pageKnowledge.textContent = `${pageN}/${totalPages}`;
 
 const selectorName = ".carousel";
 let Xstart = 0;
@@ -52,7 +57,7 @@ let Xend = 0;
 let Yend = 0;
 let difYtouch = 0;
 let displacement = "";
-function operations() {
+function touchMove() {
   difYtouch = Math.sqrt((Ystart - Yend)**2);
   // console.log(difYtouch);
   if(((Xstart - Xend) >= 30) && (difYtouch < 50)) {
@@ -83,10 +88,14 @@ function clickLeft() {
       case -widthWindow:
         document.getElementById('knowledge-3').setAttribute("tabindex", "-1");
         document.getElementById('knowledge-2').removeAttribute("tabindex");
+        pageN = 2;
+        pageKnowledge.textContent = `${pageN}/${totalPages}`;
         break;
       case 0:
         document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
         document.getElementById('knowledge-1').removeAttribute("tabindex");
+        pageN = 1;
+        pageKnowledge.textContent = `${pageN}/${totalPages}`;
         break;
       default:
         break;
@@ -120,10 +129,14 @@ function clickRight() {
       case -widthWindow:
         document.getElementById('knowledge-1').setAttribute("tabindex", "-1");
         document.getElementById('knowledge-2').removeAttribute("tabindex");
+        pageN = 2;
+        pageKnowledge.textContent = `${pageN}/${totalPages}`;
         break;
       case -(widthWindow * 2):
         document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
         document.getElementById('knowledge-3').removeAttribute("tabindex");
+        pageN = 3;
+        pageKnowledge.textContent = `${pageN}/${totalPages}`;
         break;
       default:
         break;
@@ -138,3 +151,6 @@ function clickRight() {
     });
   }
 }
+
+
+

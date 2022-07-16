@@ -12,9 +12,10 @@ function isElementPartiallyVisible(elt) {
 }
 */
 
-const interactiveHand = document.getElementById('interactiveHand');
-const interHand = document.querySelector('.interactive-hand');
+const interactiveHand = document.querySelector('.carousel-hand');
 const eCarousel = document.querySelector('.carousel');
+let counterHand = 0;
+
 
 const breackPoint = matchMedia('(max-width: 767px)');
 
@@ -23,7 +24,6 @@ const carouselHand = () => {
     window.addEventListener('scroll', () => {
       let eCarouselTop = eCarousel.getBoundingClientRect().top;
       let eCarouselBttm = eCarousel.getBoundingClientRect().bottom;
-      let eCarouselHeight = eCarousel.getBoundingClientRect().height;
       /* Métodos con los que calculé las apariciones.
       console.log("innerWidth:  " + innerWidth + " ; innerHeight: " + innerHeight);
       console.log("outerWidth:  " + outerWidth + " ; outerHeight: " + outerHeight);
@@ -32,11 +32,12 @@ const carouselHand = () => {
       console.log(eCarousel.getBoundingClientRect());
       console.log("scrollY: " + scrollY);
       */
-      if ((eCarouselTop > 0) && eCarouselBttm < outerHeight) {
-        interHand.style.animationName = "movingHand";
+      if ((eCarouselTop > 0) && (eCarouselBttm < outerHeight) && (counterHand < 2)) {
+        interactiveHand.classList.add('interactive-hand');
       }
-      if ((eCarouselTop < (outerHeight * (.3 - 1))) || eCarouselBttm >= (outerHeight * 1.7)) {
-        interHand.style.animationName = "";
+      if (((eCarouselTop < (outerHeight * (.3 - 1))) || eCarouselBttm >= (outerHeight * 1.7)) && document.querySelector('.interactive-hand')) {
+        counterHand++;
+        interactiveHand.classList.remove('interactive-hand');
       }
     });
   }

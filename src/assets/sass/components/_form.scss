@@ -1,4 +1,5 @@
 .form {
+  position: relative;
   margin-top: 2rem;
   padding: 2rem;
   border: $border-width solid var(--border-color);
@@ -8,6 +9,7 @@
     width: 500px;
   }
 
+  
   &-container {
     text-align: left;
   }
@@ -38,4 +40,18 @@
   &__button {
     text-align: center;
   }
+  &__decoration {
+    position: absolute;
+    width: 100%;
+    left:  0;
+    top: 0;
+    z-index: var(--z-back);
+    transition-property: transform;
+    transition-duration: 1s;
+    transform-origin: center top;
+    transform: rotateX(90deg);
+  }
+}
+.card-svg {
+  width: 100%;
 }

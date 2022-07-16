@@ -140,6 +140,11 @@
     padding: .5rem 0;
   }
 }
+.page-number {
+  position: absolute;
+  bottom: calc(var(--separate-window) + .5rem);
+  right: .5rem;
+}
 
 .c-contact {
   padding-bottom: 6rem;
