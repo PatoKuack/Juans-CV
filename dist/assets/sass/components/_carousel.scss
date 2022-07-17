@@ -19,12 +19,25 @@
   &-item {
     display: inline-block;
     list-style: none;
+    overflow-y: scroll;
+    @include from(m) {
+      // overflow-y: inherit;
+      // width: var(--width-window);
+    }
   }  
   &-container {
     position: relative;
     left: 0;
-    width: 1500px;
+    width: calc(var(--width-window) * 3);
     display: flex;
+    max-height: 400px;
+    border-top: $border-width solid var(--border-color);
+    border-bottom: $border-width solid var(--border-color);
+    
+    @include from(m){
+      // max-height: auto;
+      height: 500px;
+    }
   }
 }
 
@@ -37,7 +50,8 @@
 
 
 .knowledge {
-  border: $border-width solid var(--border-color);
+  border-left: $border-width solid var(--border-color);
+  border-right: $border-width solid var(--border-color);
   display: inline-block;
   min-height: 100%;
   padding: calc(var(--separate-window) / 2) calc(var(--separate-window) * 1.5);
@@ -48,7 +62,6 @@
   
   @include from(m) {
     padding: var(--separate-window) calc(var(--separate-window) * 4);
-    min-height: 500px;
   }
 }
 

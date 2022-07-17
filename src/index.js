@@ -1,5 +1,5 @@
 // import showMenu from './utils/showMenu.js';
-import './styles/fonts.css';
+// import './styles/fonts.css';
 // import './styles/main.css';
 import './assets/sass/main.scss';
 
