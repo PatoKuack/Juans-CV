@@ -3,6 +3,7 @@
 
   &__link:hover {
     background-image: linear-gradient(to right top, var(--bg-color-hover) 0%, var(--bg-color-containerA) 80%);
+    // background-image: radial-gradient(at 100% 0%, var(--bg-color-hover) 25%, var(--bg-color-containerB) 100%);
   }
   &__link {
     display: block;
@@ -18,8 +19,12 @@
     &__link {
       display: flex;
       align-items: center;
-      height: 100%;
+      height: calc(100% - (var(--outline-width) * 2));
       padding: 0 1rem;
+      margin-top: var(--outline-width);
+    }
+    &__link:focus {
+      outline: var(--outline);
     }
   }
 }
@@ -59,6 +64,7 @@
     width: auto;
     height: 100%;
     padding-top: 0;
+    padding-right: 1rem;
     border-style: none;
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);

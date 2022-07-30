@@ -9,5 +9,6 @@ import './utils/appear.js';
 import './utils/buttons.js';
 import './utils/theme-cubic.js';
 import './utils/form.js';
+import './utils/card-dates.js';
 
 // showMenu( 'main-menu-toggle', 'main-nav' );

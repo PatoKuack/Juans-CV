@@ -48,7 +48,7 @@ const pageKnowledge = document.getElementById('page-number');
 const allPages = document.querySelectorAll('.carousel-item');
 let totalPages = allPages.length;
 var pageN = 1;
-pageKnowledge.textContent = `${pageN}/${totalPages}`;
+pageKnowledge.textContent = `${pageN} de ${totalPages}`;
 
 const selectorName = ".carousel";
 let Xstart = 0;
@@ -86,16 +86,20 @@ function clickLeft() {
     document.querySelector(".carousel-container").style.left = `${newValue}px`;
     switch (newValue) {
       case -widthWindow:
-        document.getElementById('knowledge-3').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-2').removeAttribute("tabindex");
+        document.getElementById('knowledge-3__button').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-2__button').removeAttribute("tabindex");
+        document.getElementById('knowledge-3').setAttribute("aria-hidden", "true");
+        document.getElementById('knowledge-2').removeAttribute("aria-hidden");
         pageN = 2;
-        pageKnowledge.textContent = `${pageN}/${totalPages}`;
+        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
         break;
       case 0:
-        document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-1').removeAttribute("tabindex");
+        document.getElementById('knowledge-2__button').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-1__button').removeAttribute("tabindex");
+        document.getElementById('knowledge-2').setAttribute("aria-hidden", "true");
+        document.getElementById('knowledge-1').removeAttribute("aria-hidden");
         pageN = 1;
-        pageKnowledge.textContent = `${pageN}/${totalPages}`;
+        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
         break;
       default:
         break;
@@ -127,16 +131,20 @@ function clickRight() {
     document.querySelector(".carousel-container").style.left = `${newValue}px`;
     switch (newValue) {
       case -widthWindow:
-        document.getElementById('knowledge-1').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-2').removeAttribute("tabindex");
+        document.getElementById('knowledge-1__button').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-2__button').removeAttribute("tabindex");
+        document.getElementById('knowledge-1').setAttribute("aria-hidden", "true");
+        document.getElementById('knowledge-2').removeAttribute("aria-hidden");
         pageN = 2;
-        pageKnowledge.textContent = `${pageN}/${totalPages}`;
+        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
         break;
       case -(widthWindow * 2):
-        document.getElementById('knowledge-2').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-3').removeAttribute("tabindex");
+        document.getElementById('knowledge-2__button').setAttribute("tabindex", "-1");
+        document.getElementById('knowledge-3__button').removeAttribute("tabindex");
+        document.getElementById('knowledge-2').setAttribute("aria-hidden", "true");
+        document.getElementById('knowledge-3').removeAttribute("aria-hidden");
         pageN = 3;
-        pageKnowledge.textContent = `${pageN}/${totalPages}`;
+        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
         break;
       default:
         break;

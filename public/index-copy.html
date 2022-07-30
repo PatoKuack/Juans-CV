@@ -143,6 +143,19 @@
   </section>
   </main>
   
+  <footer class="contact-section">
+    <h2 class="header">Contacto</h2>
+    <p class="intro">Para manderme un mensaje puedes usar el formulario que sigue</p>
+    <form class="form-container">
+      <label class="form-label">Nombre</label><input type="text" aria-label="nombre" id="name"/> 
+      <span id="name-error" aria-live="assertive"></span>
+      <br />
+      <label class="form-label">Correo</label><input type="text" aria-label="correo"/> <br />
+      <label class="message-input">Mensaje<input type="text" /> <br /></label>
+      <button class="send-button">Enviar</button>
+    </form>
+  </footer>
+
   <script>
     window.onload = () => {
       document.querySelector(".arrow-right").addEventListener("click", clickRight);

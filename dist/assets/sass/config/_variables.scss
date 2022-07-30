@@ -10,7 +10,7 @@ $breackpoints: (
 :root{
   /* COLORS */
   /* https://www.w3.org/TR/css-color-3/#svg-color */
-  --text-color            : #edf5f6f5;
+  --text-color            : #eef9fa;
   --selection             : #e6daad58;
   --border-color          : #e2e6e8;
   --bg-color-body         : #a3a9ac;
@@ -18,22 +18,17 @@ $breackpoints: (
   --bg-color-containerB   : #9aafb4;
   --bg-color-containerC   : #676868;
   --bg-color-hover        : #869ba0;
-
+  --outline-color         : #ffdea0;
+  
   // --text-color          : #333434;
-  // --border-color        : #053544;
-  // --bg-color-body       : #f0f8ff;
-  // --bg-color-containerA : #b9f2ff;
+  // --selection           : rgb(217, 0, 255);
+  // --border-color        : #157a99;
+  // --bg-color-body       : #ecf6ff;
+  // --bg-color-containerA : #baeefa;
   // --bg-color-containerB : #d7f8ff;
-  // --bg-color-hover      : #f0f8ff;
-  --bg-carousel           : #8a1dc520;
-  --bg-carousel-arrow     : #c4d0ff;
-
-  --a1: #9f9f9f;
-  --a2: #bababa;
-  --b: #fffafa;
-  --c: #282828;
-  --x: #6fc8dc;
-  --y: #bfe5f4;
+  // --bg-color-containerC : #a7e8f6;
+  // --bg-color-hover      : #a3d2dd;
+  
 }
 
 
@@ -67,11 +62,13 @@ $breackpoints: (
 
 //Otros valores:
 :root{
-  --header-height               : 3rem;
-  --profil-image-width          : 12rem;
+  --header-height       : 3rem;
+  --profil-image-width  : 12rem;
+  --outline-width       : 3px;
+  --outline             : var(--outline-width) solid var(--outline-color);
   @media screen and (min-width: map_get($breackpoints, m)){
-    --header-height               : 3.5rem;
-    --profil-image-width          : 14rem;
+    --header-height     : 3.5rem;
+    --profil-image-width: 14rem;
   }
 }
 

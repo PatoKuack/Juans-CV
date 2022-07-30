@@ -6,7 +6,7 @@
     font-weight: bold;
   }
   &__simple {
-    background-color: var(--bg-color-containerB);
+    background-color: var(--bg-color-containerC);
     color: var(--text-color);
     padding: .5rem;
     border-width: .1rem;
@@ -16,5 +16,12 @@
   }
   &__simple:hover {
     background-color: var(--bg-color-hover);
+  }
+
+  @include from(m) {
+    &:focus {
+      outline: var(--outline);
+      outline-offset: -4px;
+    }
   }
 }

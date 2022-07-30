@@ -1,6 +1,6 @@
 .main-header {
-  height: $header-height;
   position: fixed;
+  height: $header-height;
   width: 100%;
   z-index: var(--z-fixed);
   top: 0;
@@ -13,6 +13,7 @@
     border-style: none solid solid solid;
     height: 100%;
     background-color: var(--bg-color-containerA);
+    background-image: none;
   }
   @include from(m) {
     &__container {
@@ -28,20 +29,30 @@
   height: calc(#{$header-height} - (#{$header-height}/2));
   font-size: calc(#{$header-height} - (#{$header-height}/2));
   color: var(--text-color);
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: calc(#{$toggle-width} + #{$margin-left-toggle});
   
-  @include from(m) {
-    margin-left: $toggle-width;
-    margin-right: 0;
-
-    & + * {
-      margin-right: $toggle-width;
-    }
-  }
   & > * {
     // max-height: $toggle-width;
     height: 100%;
+  }
+  &__pre {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: calc(#{$toggle-width} + #{$margin-left-toggle});
+  }
+  
+  @include from(m) {
+    
+    &:focus {
+      outline: var(--outline);
+    }
+    & + * {
+      margin-right: $toggle-width;
+    }
+    &__pre {
+      margin-left: $toggle-width;
+      margin-right: 0;
+      padding-right: 0;
+    }
   }
 }

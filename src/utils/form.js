@@ -10,6 +10,9 @@ formInputs.forEach( e => {
     cardDecoration.style.transform = "rotateX(0deg)";
   });
 });
-/* formButton.addEventListener('submit', () => {
-  cardDecoration.style.transform = "rotateX(0deg)";
-}); */
+
+// formButton.addEventListener('submit', sendCard);
+
+// document.querySelector('.form-container').preventDefault();
+// function sendCard(event) {
+// }

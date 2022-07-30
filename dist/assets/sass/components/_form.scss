@@ -4,12 +4,9 @@
   padding: 2rem;
   border: $border-width solid var(--border-color);
   
-  @include from(m) {
-    padding: 2rem 4rem;
-    width: 500px;
+  &-title {
+    margin-bottom: 1rem;
   }
-
-  
   &-container {
     text-align: left;
   }
@@ -50,6 +47,15 @@
     transition-duration: 1s;
     transform-origin: center top;
     transform: rotateX(90deg);
+  }
+  
+  @include from(m) {
+    padding: 2rem 4rem;
+    width: 500px;
+    
+    &__input:focus {
+      outline: var(--outline);
+    }
   }
 }
 .card-svg {
