@@ -28,6 +28,6 @@ button.forEach( e => {
 // }
 buttonCV.addEventListener('click', () => {
   setTimeout( function() {
-    window.open("https://drive.google.com/file/d/1fG6BXv5bLBc4jAIhOT_yqRBbU418jaS7/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/15VK7H_8fxpyQm7WvAC7CANbrXtP8-6Zi/view?usp=share_link", "_blank");
   }, 250);
 });

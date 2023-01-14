@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   document.getElementById('arrow-left').addEventListener('click', clickLeft);
   document.getElementById('arrow-right').addEventListener('click', clickRight);
   
-  document.querySelector('.c-knowledge').addEventListener('keydown', e => {
+  document.querySelector('.c-skills').addEventListener('keydown', e => {
     switch(e.key) {
       case 'ArrowLeft':
         clickLeft();
@@ -44,11 +44,11 @@ window.addEventListener('load', () => {
 
 });
 
-const pageKnowledge = document.getElementById('page-number');
+const pageSkills = document.getElementById('page-number');
 const allPages = document.querySelectorAll('.carousel-item');
 let totalPages = allPages.length;
 var pageN = 1;
-pageKnowledge.textContent = `${pageN} de ${totalPages}`;
+pageSkills.textContent = `${pageN} de ${totalPages}`;
 
 const selectorName = ".carousel";
 let Xstart = 0;
@@ -86,20 +86,20 @@ function clickLeft() {
     document.querySelector(".carousel-container").style.left = `${newValue}px`;
     switch (newValue) {
       case -widthWindow:
-        document.getElementById('knowledge-3__button').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-2__button').removeAttribute("tabindex");
-        document.getElementById('knowledge-3').setAttribute("aria-hidden", "true");
-        document.getElementById('knowledge-2').removeAttribute("aria-hidden");
+        document.getElementById('skills-3__button').setAttribute("tabindex", "-1");
+        document.getElementById('skills-2__button').removeAttribute("tabindex");
+        document.getElementById('skills-3').setAttribute("aria-hidden", "true");
+        document.getElementById('skills-2').removeAttribute("aria-hidden");
         pageN = 2;
-        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
+        pageSkills.textContent = `${pageN} de ${totalPages}`;
         break;
       case 0:
-        document.getElementById('knowledge-2__button').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-1__button').removeAttribute("tabindex");
-        document.getElementById('knowledge-2').setAttribute("aria-hidden", "true");
-        document.getElementById('knowledge-1').removeAttribute("aria-hidden");
+        document.getElementById('skills-2__button').setAttribute("tabindex", "-1");
+        document.getElementById('skills-1__button').removeAttribute("tabindex");
+        document.getElementById('skills-2').setAttribute("aria-hidden", "true");
+        document.getElementById('skills-1').removeAttribute("aria-hidden");
         pageN = 1;
-        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
+        pageSkills.textContent = `${pageN} de ${totalPages}`;
         break;
       default:
         break;
@@ -131,20 +131,20 @@ function clickRight() {
     document.querySelector(".carousel-container").style.left = `${newValue}px`;
     switch (newValue) {
       case -widthWindow:
-        document.getElementById('knowledge-1__button').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-2__button').removeAttribute("tabindex");
-        document.getElementById('knowledge-1').setAttribute("aria-hidden", "true");
-        document.getElementById('knowledge-2').removeAttribute("aria-hidden");
+        document.getElementById('skills-1__button').setAttribute("tabindex", "-1");
+        document.getElementById('skills-2__button').removeAttribute("tabindex");
+        document.getElementById('skills-1').setAttribute("aria-hidden", "true");
+        document.getElementById('skills-2').removeAttribute("aria-hidden");
         pageN = 2;
-        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
+        pageSkills.textContent = `${pageN} de ${totalPages}`;
         break;
       case -(widthWindow * 2):
-        document.getElementById('knowledge-2__button').setAttribute("tabindex", "-1");
-        document.getElementById('knowledge-3__button').removeAttribute("tabindex");
-        document.getElementById('knowledge-2').setAttribute("aria-hidden", "true");
-        document.getElementById('knowledge-3').removeAttribute("aria-hidden");
+        document.getElementById('skills-2__button').setAttribute("tabindex", "-1");
+        document.getElementById('skills-3__button').removeAttribute("tabindex");
+        document.getElementById('skills-2').setAttribute("aria-hidden", "true");
+        document.getElementById('skills-3').removeAttribute("aria-hidden");
         pageN = 3;
-        pageKnowledge.textContent = `${pageN} de ${totalPages}`;
+        pageSkills.textContent = `${pageN} de ${totalPages}`;
         break;
       default:
         break;

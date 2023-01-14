@@ -331,14 +331,13 @@ p, ul {
 
 .c-presentation {
   min-height: 500px;
-  height: calc(100vh - var(--header-height));
   position: relative;
   border-top-style: none;
   margin-top: var(--header-height);
   text-align: center; }
   .c-presentation-content {
-    margin-top: auto;
-    margin-bottom: auto; }
+    margin-left: 0;
+    margin-right: 0; }
   .c-presentation__image {
     border: 3px solid var(--border-color);
     border-radius: 50%;
