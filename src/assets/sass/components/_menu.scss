@@ -79,9 +79,13 @@
   width: $toggle-width;
   height: 1.8rem;
   margin-left: $margin-left-toggle;
+  margin-right: 2px;
   position: relative;
   cursor: pointer;
   z-index: calc(var(--z-fixed) + 1);
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
 
   &::before, &::after {
     content: '';

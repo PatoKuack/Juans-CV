@@ -64,7 +64,7 @@ $breackpoints: (
 :root{
   --header-height       : 3rem;
   --profil-image-width  : 12rem;
-  --outline-width       : 3px;
+  --outline-width       : 2px;
   --outline             : var(--outline-width) solid var(--outline-color);
   @media screen and (min-width: map_get($breackpoints, m)){
     --header-height     : 3.5rem;

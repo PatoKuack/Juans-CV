@@ -1,7 +1,7 @@
 .main-header {
   position: fixed;
   height: $header-height;
-  width: 100%;
+  width: 100vw;
   z-index: var(--z-fixed);
   top: 0;
 
@@ -15,9 +15,13 @@
     background-color: var(--bg-color-containerA);
     background-image: none;
   }
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
   @include from(m) {
     &__container {
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
       // align-items: center;
       // align-content: center;
@@ -40,12 +44,11 @@
     margin-right: auto;
     padding-right: calc(#{$toggle-width} + #{$margin-left-toggle});
   }
+  &:focus {
+    outline: var(--outline);
+  }
   
   @include from(m) {
-    
-    &:focus {
-      outline: var(--outline);
-    }
     & + * {
       margin-right: $toggle-width;
     }
